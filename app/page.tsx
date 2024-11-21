@@ -8,8 +8,8 @@ import Projects from './pages/project';
 
 // Navbar Component
 interface NavbarProps {
-  toggleTheme: () => void; // Function type for toggleTheme
-  isDark: boolean; // Boolean type for isDark
+  toggleTheme: () => void;
+  isDark: boolean;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDark }) => {
@@ -42,7 +42,8 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDark }) => {
   );
 };
 
-const Portfolio: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+// Main page component
+export default function Page() {
   const [isDark, setIsDark] = useState(false);
 
   const toggleTheme = () => {
@@ -57,10 +58,7 @@ const Portfolio: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <About />
         <Projects />
         <Contact />
-        {children}
       </div>
     </div>
   );
-};
-
-export default Portfolio;
+}
