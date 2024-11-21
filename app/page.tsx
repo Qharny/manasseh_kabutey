@@ -42,16 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDark }) => {
   );
 };
 
-
-
-
-
-
-// Contact Section
-
-
-// Main App Component
-const Portfolio = () => {
+const Portfolio: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isDark, setIsDark] = useState(false);
 
   const toggleTheme = () => {
@@ -59,13 +50,14 @@ const Portfolio = () => {
   };
 
   return (
-    <div className={isDark ? 'dark' : ''}>
+    <div className={isDark ? 'dark' : 'light'}>
       <div className="min-h-screen bg-white dark:bg-gray-900 dark:text-white">
         <Navbar toggleTheme={toggleTheme} isDark={isDark} />
         <Hero />
         <About />
         <Projects />
         <Contact />
+        {children}
       </div>
     </div>
   );

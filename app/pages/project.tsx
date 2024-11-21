@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "../components/UI/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/UI/card";
