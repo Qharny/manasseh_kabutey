@@ -1,90 +1,78 @@
-'use client'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
-import { useState } from 'react'
+"use client";
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = [
+  const menuItems = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/projects', label: 'Projects' },
     { href: '/contact', label: 'Contact' }
-  ]
+  ];
 
   return (
     <header className="bg-white shadow-md">
-      <nav className="container mx-auto flex justify-between items-center p-4">
+      <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-blue-600">
-          Your Name
+          MyPortfolio
         </Link>
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden">
           <button 
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-700 focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="focus:outline-none"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? '✕' : '☰'}
           </button>
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-6">
-          {navItems.map((item, index) => (
-            <motion.li
-              key={item.href}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            >
+        <motion.ul 
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3 }}
+          className="hidden md:flex space-x-6"
+        >
+          {menuItems.map((item) => (
+            <li key={item.href}>
               <Link 
                 href={item.href} 
-                className="text-gray-800 hover:text-blue-600 transition-colors"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
               >
                 {item.label}
               </Link>
-            </motion.li>
+            </li>
           ))}
-        </ul>
+        </motion.ul>
 
-        {/* Mobile Navigation Overlay */}
-        {isOpen && (
+        {/* Mobile Menu */}
+        {isMenuOpen && (
           <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="fixed inset-0 bg-black/50 z-40 md:hidden"
-            onClick={() => setIsOpen(false)}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="absolute top-16 left-0 w-full bg-white md:hidden"
           >
-            <motion.ul 
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              className="absolute right-0 top-0 w-64 h-full bg-white shadow-lg p-6 space-y-4"
-            >
-              <button 
-                onClick={() => setIsOpen(false)}
-                className="absolute top-4 right-4"
-              >
-                <X size={24} />
-              </button>
-              {navItems.map((item) => (
-                <li key={item.href} className="text-center">
+            <ul className="flex flex-col items-center space-y-4 py-4">
+              {menuItems.map((item) => (
+                <li key={item.href}>
                   <Link 
                     href={item.href} 
-                    className="block py-2 text-gray-800 hover:bg-gray-100"
-                    onClick={() => setIsOpen(false)}
+                    className="text-gray-700 hover:text-blue-600"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
                   </Link>
                 </li>
               ))}
-            </motion.ul>
+            </ul>
           </motion.div>
         )}
       </nav>
     </header>
-  )
+  );
 }

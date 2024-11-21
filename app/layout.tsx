@@ -1,14 +1,15 @@
+// app/layout.tsx
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from './components/header'
-import Footer from './components/footer'
+import { ThemeProvider } from './components/theme-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Your Portfolio',
-  description: 'Personal portfolio showcasing projects and skills'
+  title: 'Manasseh | Software Engineer',
+  description: 'FSoftware Engineer specializing in Mobile and Web technologies',
+  keywords: ['Software Engineer', 'Full Stack Developer', 'Flutter Developer', 'Node.js Developer'],
 }
 
 export default function RootLayout({
@@ -17,13 +18,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-gray-50 min-h-screen flex flex-col`}>
-        <Header />
-        <main className="flex-grow container mx-auto px-4 py-8">
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
-        </main>
-        <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
