@@ -33,7 +33,23 @@ const AllProjects = () => {
           image: "/public/images/beads.png",
           github: "#",
           live: "https://manassehkabutey.vercel.app/"
-        }
+        },
+        {
+          title: "Shipping Company Portfolio",
+          description: "Companies portfolio showcasing their service and products",
+          tech: ["HTML", "CSS", "Tailwind", "JavaScript"],
+          image: "/public/images/tsk.png",
+          github: "#",
+          live: "https://tsk-silk.vercel.app/"
+        },
+        {
+          title: "Software Company Portfolio",
+          description: "Companies portfolio showcasing their service and products",
+          tech: ["HTML", "CSS", "Tailwind", "JavaScript"],
+          image: "../../public/images/sparknest.png",
+          github: "#",
+          live: "https://sparknest.tech/"
+        },
       ]
     },
     {
