@@ -57,7 +57,7 @@ const AllProjects = () => {
       projects: [
         {
           title: "Tracking App",
-          description: "Mobile app for tracking location of missing phons",
+          description: "Mobile app for tracking location of missing phones",
           tech: ["Flutter", "Firebase", "GetX"],
           image: "https://raw.githubusercontent.com/Qharny/manasseh_kabutey/refs/heads/main/public/images/tracker1.jpg?token=GHSAT0AAAAAACZHFHJVWTJB7DBJKUKGIYFCZ2A54PA",
           github: "https://github.com/Qharny/TrackerMate.git",

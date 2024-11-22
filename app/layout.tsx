@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="https://raw.githubusercontent.com/Qharny/manasseh_kabutey/refs/heads/main/public/profile1.png?token=GHSAT0AAAAAACZHFHJVOMJLRYIJUD27CRL2Z2A6PXA" />
+        <link rel="icon" href="/profile1.png" />
       </head>
       <body className={inter.className}>
         <ThemeProvider
