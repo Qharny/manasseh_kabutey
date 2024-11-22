@@ -12,27 +12,27 @@ const AllProjects = () => {
       projects: [
         {
           title: "E-commerce Platform",
-          description: "Full-stack e-commerce solution with React and Node.js",
-          tech: ["React", "Node.js", "MongoDB", "Express"],
-          image: "/api/placeholder/400/200",
+          description: "Full-stack e-commerce solution with HTML, Tailwind, JavaScript and firebase",
+          tech: ["HTML", "Tailwind", "JavaScript", "Firebase"],
+          image: "/public/images/beads.png",
           github: "#",
-          live: "#"
+          live: "https://bead-ochre.vercel.app/"
         },
         {
-          title: "Task Management App",
-          description: "Collaborative task management tool with real-time updates",
-          tech: ["Next.js", "Firebase", "Tailwind", "React"],
-          image: "/api/placeholder/400/200",
+          title: "Food E-comerce Platform",
+          description: "E-commerce solution with HTML, CSS, Tailwind ",
+          tech: ["HTML", "CSS", "JavaScript"],
+          image: "/public/images/dine.png",
           github: "#",
-          live: "#"
+          live: "https://lets-dine-six.vercel.app/"
         },
         {
           title: "Portfolio Website",
           description: "Personal portfolio showcasing skills and projects",
           tech: ["Next.js", "TypeScript", "Tailwind", "Shadcn/UI"],
-          image: "/api/placeholder/400/200",
+          image: "/public/images/beads.png",
           github: "#",
-          live: "#"
+          live: "https://manassehkabutey.vercel.app/"
         }
       ]
     },
@@ -40,12 +40,12 @@ const AllProjects = () => {
       category: "Mobile Development",
       projects: [
         {
-          title: "Fitness Tracking App",
-          description: "Mobile app for tracking workouts and fitness progress",
+          title: "Tracking App",
+          description: "Mobile app for tracking location of missing phons",
           tech: ["Flutter", "Firebase", "GetX"],
-          image: "/api/placeholder/400/200",
-          github: "#",
-          live: "#"
+          image: "/public/images/tracker1.jpg",
+          github: "https://github.com/Qharny/TrackerMate.git",
+          live: "https://github.com/Qharny/TrackerMate/releases/download/v1.0.0/app-release.apk"
         },
         {
           title: "Recipe Sharing Social App",
@@ -54,6 +54,35 @@ const AllProjects = () => {
           image: "/api/placeholder/400/200",
           github: "#",
           live: "#"
+        }
+      ]
+    },
+    {
+      category: "Console Application",
+      projects: [
+        {
+          title: "Evoting System",
+          description: "A voting system for elections",
+          tech: ["dart", "local Storage"],
+          image: "/api/placeholder/400/200",
+          github: "https://github.com/Qharny/E-voting.git",
+          live: "https://github.com/Qharny/E-voting.git"
+        },
+        {
+          title: "Chat Sever",
+          description: "This project is a simple chat server implemented in Dart using WebSockets. It allows multiple clients to connect and exchange messages in real-time.",
+          tech: ["dart", "websocket"],
+          image: "/api/placeholder/400/200",
+          github: "https://github.com/Qharny/chat_server.git",
+          live: "https://github.com/Qharny/chat_server/releases/tag/v1.0.0"
+        },
+        {
+          title: "Web Scrapper",
+          description: "A versatile command-line web scraper built with Dart. This tool allows you to scrape web pages and save the extracted data in various formats.",
+          tech: ["dart"],
+          image: "/api/placeholder/400/200",
+          github: "https://github.com/Qharny/Dart_Web_Scraper.git",
+          live: "https://github.com/Qharny/Dart_Web_Scraper.git"
         }
       ]
     }
@@ -69,14 +98,14 @@ const AllProjects = () => {
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {category.projects.map((project) => (
-              <Card 
-                key={project.title} 
+              <Card
+                key={project.title}
                 className="transition-all duration-300 hover:shadow-xl"
               >
                 <CardHeader>
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
+                  <img
+                    src={project.image}
+                    alt={project.title}
                     className="object-cover w-full h-48 rounded-t-lg"
                   />
                 </CardHeader>
@@ -89,15 +118,15 @@ const AllProjects = () => {
                     ))}
                   </div>
                   <div className="flex gap-4 mt-4">
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
+                    <Button
+                      size="sm"
+                      variant="outline"
                       onClick={() => window.open(project.github, '_blank')}
                     >
                       <Github className="w-4 h-4 mr-2" />
                       Code
                     </Button>
-                    <Button 
+                    <Button
                       size="sm"
                       onClick={() => window.open(project.live, '_blank')}
                     >

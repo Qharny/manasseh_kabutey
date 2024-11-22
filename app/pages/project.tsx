@@ -9,19 +9,19 @@ const Projects = () => {
   const projects = [
     {
       title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with React and Node.js",
-      tech: ["React", "Node.js", "MongoDB"],
-      image: "/api/placeholder/400/200",
+      description: "Full-stack e-commerce solution with HTML, Tailwind, JS and firebase",
+      tech: ["HTML", "Tailwind", "JS", "Firebase"],
+      image: "/public/images/beads.png",
       github: "#",
-      live: "#"
+      live: "https://bead-ochre.vercel.app/"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management tool with real-time updates",
-      tech: ["Next.js", "Firebase", "Tailwind"],
-      image: "/api/placeholder/400/200",
-      github: "#",
-      live: "#"
+      title: "Tracking App",
+      description: "Mobile app for tracking location of missing phons",
+      tech: ["Flutter", "Firebase", "GetX"],
+      image: "/public/images/tracker1.jpg",
+      github: "https://github.com/Qharny/TrackerMate.git",
+      live: "https://github.com/Qharny/TrackerMate/releases/download/v1.0.0/app-release.apk"
     },
   ];
 
