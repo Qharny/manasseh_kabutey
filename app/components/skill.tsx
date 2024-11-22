@@ -9,7 +9,7 @@ const skillCategories = [
     skills: [
       { name: "HTML/CSS", level: 95 },
       { name: "JavaScript", level: 40 },
-      { name: "Next.js", level: 85 },
+      { name: "Next.js", level: 45 },
       { name: "TypeScript", level: 30 },
       { name: "React", level: 10 },
       { name: "Tailwind CSS", level: 60 },
@@ -19,9 +19,9 @@ const skillCategories = [
     title: "Mobile Development",
     skills: [
       { name: "Flutter", level: 60 },
-    //   { name: "React Native", level: 80 },
       { name: "Android", level: 30 },
-      { name: "iOS", level: 60 },
+      { name: "iOS", level: 40 },
+      { name: "Kotlin", level: 20 },
     ],
   },
   {
@@ -37,11 +37,9 @@ const skillCategories = [
   {
     title: "Tools & Others",
     skills: [
-      { name: "Git", level: 90 },
-    //   { name: "Docker", level: 75 },
-    //   { name: "AWS", level: 70 },
+      { name: "Git", level: 40 },
+      { name: "Github", level: 70 },
       { name: "Firebase", level: 85 },
-    //   { name: "CI/CD", level: 75 },
     ],
   },
 ];

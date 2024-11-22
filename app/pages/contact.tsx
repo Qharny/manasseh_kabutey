@@ -24,7 +24,18 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Add your form submission logic here
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
       console.log("Form submitted:", formData);
       // Reset form after successful submission
       setFormData({ name: "", email: "", message: "" });

@@ -7,8 +7,9 @@ import Projects from './pages/project';
 import ContactSection from './pages/contact';
 import Skills from './components/skill';
 import { Button } from './components/UI/button';
+import Education from './components/education';
+import Footer from './components/footer';
 
-// Navbar Component
 interface NavbarProps {
   toggleTheme: () => void;
   isDark: boolean;
@@ -16,6 +17,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDark }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,14 +34,29 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDark }) => {
       <div className="container px-4 mx-auto">
         <div className="flex items-center justify-between h-16">
           <span className="text-xl font-bold">Portfolio</span>
-          <div className="flex items-center gap-4">
+          <div className="items-center hidden gap-4 md:flex">
+            <Button variant="ghost" size="icon" onClick={toggleTheme}>
+              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </Button>
+            <Button>Contact</Button>
+          </div>
+          <div className="md:hidden">
+            <Button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+              {isMobileMenuOpen ? 'Close' : 'Menu'}
+            </Button>
+          </div>
+        </div>
+      </div>
+      {isMobileMenuOpen && (
+        <div className="bg-white md:hidden dark:bg-gray-900">
+          <div className="flex flex-col items-center">
             <Button variant="ghost" size="icon" onClick={toggleTheme}>
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>
             <Button>Contact</Button>
           </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
@@ -59,7 +76,9 @@ const Page = () => {
         <About />
         <Skills/>
         <Projects />
+        <Education />
         <ContactSection />
+        <Footer/>
       </div>
     </div>
   );
