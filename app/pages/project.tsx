@@ -16,6 +16,14 @@ const Projects = () => {
       live: "https://bead-ochre.vercel.app/"
     },
     {
+      title: "Web Scrapper",
+      description: "A versatile command-line web scraper built with Dart. This tool allows you to scrape web pages and save the extracted data in various formats.",
+      tech: ["dart"],
+      image: "/api/placeholder/400/200",
+      github: "https://github.com/Qharny/Dart_Web_Scraper.git",
+      live: "https://github.com/Qharny/Dart_Web_Scraper.git"
+    },
+    {
       title: "Tracking App",
       description: "Mobile app for tracking location of missing phons",
       tech: ["Flutter", "Firebase", "GetX"],

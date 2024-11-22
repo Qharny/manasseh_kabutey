@@ -64,9 +64,9 @@ const AllProjects = () => {
           live: "https://github.com/Qharny/TrackerMate/releases/download/v1.0.0/app-release.apk"
         },
         {
-          title: "Recipe Sharing Social App",
-          description: "Platform for sharing and discovering recipes",
-          tech: ["React Native", "Expo", "Firebase"],
+          title: "EduAtlas",
+          description: "Platform for that shows University and Colleges by typing country name",
+          tech: ["Flutter", "Dart"],
           image: "/api/placeholder/400/200",
           github: "#",
           live: "#"
