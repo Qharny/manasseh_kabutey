@@ -23,11 +23,24 @@ const Hero = () => (
           A Software Engineer
         </p>
         <div className="flex justify-center gap-4">
-          <Button>View Projects</Button>
-          <Button variant="outline">Download CV</Button>
+          <Button onClick={() => handleViewProjects()}>View Projects</Button>
+          <Button variant="outline" onClick={() => handleDownloadCV()}>Download CV</Button>
         </div>
       </div>
     </div>
   );
 
-  export default Hero
+// Define the functions
+const handleViewProjects = () => {
+    // Logic to view projects, e.g., navigate to the projects page
+    console.log('Viewing projects...');
+    // You can use a router to navigate if needed
+};
+
+const handleDownloadCV = () => {
+    // Logic to download CV, e.g., trigger a file download
+    console.log('Downloading CV...');
+    // You can implement the download logic here
+};
+
+export default Hero

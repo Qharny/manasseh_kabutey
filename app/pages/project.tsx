@@ -26,16 +26,16 @@ const Projects = () => {
   
     return (
       <section className="py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+        <div className="container px-4 mx-auto">
+          <h2 className="mb-12 text-3xl font-bold text-center">Featured Projects</h2>
+          <div className="grid gap-8 md:grid-cols-2">
             {projects.map((project) => (
-              <Card key={project.title} className="hover:shadow-lg transition-shadow">
+              <Card key={project.title} className="transition-shadow hover:shadow-lg">
                 <CardHeader>
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="rounded-t-lg h-48 w-full object-cover"
+                    className="object-cover w-full h-48 rounded-t-lg"
                   />
                 </CardHeader>
                 <CardContent>

@@ -19,7 +19,7 @@ const educationData = [
     degree: "Bachelor of Science in Computer Science and Engineering",
     institution: "University of Mines and Technology",
     location: "Tarkwa, Ghana",
-    period: "2023 - 2026",
+    period: "2023 - 2026 | pursing",
     description: "Focused on software engineering, algorithms, and data structures. Participated in various coding competitions and hackathons.",
     // achievements: [
     //   "Dean's List for Academic Excellence",
