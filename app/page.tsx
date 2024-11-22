@@ -9,6 +9,7 @@ import Skills from './components/skill';
 import { Button } from './components/UI/button';
 import Education from './components/education';
 import Footer from './components/footer';
+import { useTheme } from './hooks/use-theme';
 
 interface NavbarProps {
   toggleTheme: () => void;
@@ -62,16 +63,12 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDark }) => {
 };
 
 const Page = () => {
-  const [isDark, setIsDark] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-  };
+  const { toggleTheme, theme } = useTheme();
 
   return (
-    <div className={isDark ? 'dark' : 'light'}>
+    <div className={theme === 'dark' ? 'dark' : 'light'}>
       <div className="min-h-screen bg-white dark:bg-gray-900 dark:text-white">
-        <Navbar toggleTheme={toggleTheme} isDark={isDark} />
+        <Navbar toggleTheme={toggleTheme} isDark={theme === 'dark'} />
         <Hero />
         <About />
         <Skills/>
