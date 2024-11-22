@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Manasseh | Software Engineer',
-  description: 'FSoftware Engineer specializing in Mobile and Web technologies',
+  description: 'Software Engineer specializing in Mobile and Web technologies',
   keywords: ['Software Engineer', 'Full Stack Developer', 'Flutter Developer', 'Node.js Developer'],
 }
 
