@@ -67,8 +67,8 @@ const AllProjects = () => {
           title: "EduAtlas",
           description: "Platform for that shows University and Colleges by typing country name",
           tech: ["Flutter", "Dart"],
-          image: "/api/placeholder/400/200",
-          github: "#",
+          image: "https://raw.githubusercontent.com/Qharny/manasseh_kabutey/refs/heads/main/public/images/edu.jpg?token=GHSAT0AAAAAACZHFHJVKFOHV67ZW6NUREI2Z2A6N5Q",
+          github: "https://github.com/Qharny/EduAtlas_",
           live: "#"
         }
       ]
