@@ -1,7 +1,7 @@
 import React from 'react';
-import { Badge } from "@/components/ui/badge";
+// import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
+// import { Progress } from "@/components/ui/progress";
 
 const skillCategories = [
   {
@@ -53,7 +53,7 @@ const SkillCard: React.FC<{ title: string; skills: { name: string; level: number
           <div key={skill.name} className="space-y-2">
             <div className="flex items-center justify-between">
               <span className="font-medium">{skill.name}</span>
-              <Badge variant="secondary">{skill.level}%</Badge>
+              {/* <Badge variant="secondary">{skill.level}%</Badge> */}
             </div>
             {/* <Progress value={skill.level} className="h-2" /> */}
           </div>
