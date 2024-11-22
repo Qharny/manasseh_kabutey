@@ -3,6 +3,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { Button } from "../components/UI/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/UI/card";
 import { Badge } from '../components/UI/badge';
+import Link from 'next/link';
 
 const Projects = () => {
     const projects = [
@@ -59,6 +60,13 @@ const Projects = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+          <div className="flex justify-center mt-8">
+            <Link href="/projects/index.tsx" passHref>
+              <Button size="lg">
+                View More
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
