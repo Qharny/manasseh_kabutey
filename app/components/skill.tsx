@@ -55,7 +55,7 @@ const SkillCard: React.FC<{ title: string; skills: { name: string; level: number
               <span className="font-medium">{skill.name}</span>
               <Badge variant="secondary">{skill.level}%</Badge>
             </div>
-            <Progress value={skill.level} className="h-2" />
+            {/* <Progress value={skill.level} className="h-2" /> */}
           </div>
         ))}
       </div>
