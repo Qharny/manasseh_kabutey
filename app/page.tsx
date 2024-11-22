@@ -1,11 +1,12 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Button } from './components/UI/button';
 import { Moon, Sun } from 'lucide-react';
 import About from './pages/about';
 import Hero from './pages/hero';
 import Projects from './pages/project';
-import ContactSection from './pages/contact'; // Rename this import to avoid confusion with lucide-react's Contact
+import ContactSection from './pages/contact';
+import Skills from './components/skill';
+import { Button } from './components/UI/button';
 
 // Navbar Component
 interface NavbarProps {
@@ -56,8 +57,9 @@ const Page = () => {
         <Navbar toggleTheme={toggleTheme} isDark={isDark} />
         <Hero />
         <About />
+        <Skills/>
         <Projects />
-        <ContactSection /> {/* Use your custom Contact component with a different name */}
+        <ContactSection />
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ const About = () => (
           As a Software Engineer with a passion for both mobile and web technologies, I specialize in creating applications and websites. My expertise lies in using Angular for web development and Flutter for mobile app development. I am constantly striving to enhance my coding skills and develop innovative solutions. In addition to my technical pursuits, I have a creative side as well - I enjoy playing the saxophone. 🎷
           </p>
           <div className="flex flex-wrap gap-2">
-            {['React', 'Node.js', 'TypeScript', 'AWS', 'Docker'].map((skill) => (
+            {['Flutter', 'Next Js', 'TypeScript', 'Firebase' ].map((skill) => (
               <Badge key={skill} variant="secondary">{skill}</Badge>
             ))}
           </div>
