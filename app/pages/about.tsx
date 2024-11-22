@@ -18,7 +18,7 @@ const About = () => (
         </div>
         <div className="relative h-64 bg-gray-200 rounded-lg dark:bg-gray-700">
           <div className="absolute inset-0 flex items-center justify-center">
-            <img src="/public/profile1.png" alt="Profile" className="w-32 h-32 rounded-full" />
+            <img src="https://raw.githubusercontent.com/Qharny/manasseh_kabutey/refs/heads/main/public/profile1.png?token=GHSAT0AAAAAACZHFHJVOMJLRYIJUD27CRL2Z2A6PXA" alt="Profile" className="w-32 h-32 rounded-full" />
           </div>
         </div>
       </div>
