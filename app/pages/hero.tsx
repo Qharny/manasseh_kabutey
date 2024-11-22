@@ -32,15 +32,19 @@ const Hero = () => (
 
 // Define the functions
 const handleViewProjects = () => {
-    // Logic to view projects, e.g., navigate to the projects page
     console.log('Viewing projects...');
-    // You can use a router to navigate if needed
+    // Navigate to the projects page
+    window.location.href = '/projects';
 };
 
 const handleDownloadCV = () => {
-    // Logic to download CV, e.g., trigger a file download
     console.log('Downloading CV...');
-    // You can implement the download logic here
+    const link = document.createElement('a');
+    link.href = '/public/KABUTEY MANASSEH KWAME (CV).pdf';
+    link.download = 'Manasseh_Kabutey_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 };
 
 export default Hero
