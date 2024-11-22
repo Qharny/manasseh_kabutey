@@ -1,10 +1,11 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { Button } from './components/UI/button';
-import { Contact, Moon, Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import About from './pages/about';
 import Hero from './pages/hero';
 import Projects from './pages/project';
+import ContactSection from './pages/contact'; // Rename this import to avoid confusion with lucide-react's Contact
 
 // Navbar Component
 interface NavbarProps {
@@ -27,12 +28,12 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDark }) => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
+      <div className="container px-4 mx-auto">
         <div className="flex items-center justify-between h-16">
           <span className="text-xl font-bold">Portfolio</span>
           <div className="flex items-center gap-4">
             <Button variant="ghost" size="icon" onClick={toggleTheme}>
-              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>
             <Button>Contact</Button>
           </div>
@@ -42,8 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDark }) => {
   );
 };
 
-// Main page component
-export default function Page() {
+const Page = () => {
   const [isDark, setIsDark] = useState(false);
 
   const toggleTheme = () => {
@@ -57,8 +57,10 @@ export default function Page() {
         <Hero />
         <About />
         <Projects />
-        <Contact />
+        <ContactSection /> {/* Use your custom Contact component with a different name */}
       </div>
     </div>
   );
-}
+};
+
+export default Page;
