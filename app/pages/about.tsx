@@ -8,7 +8,7 @@ const About = () => (
       <div className="grid items-center gap-8 md:grid-cols-2">
         <div className="space-y-4">
           <p className="text-gray-600 dark:text-gray-300">
-          As a Software Engineer with a passion for both mobile and web technologies, I specialize in creating applications and websites. My expertise lies in using Angular for web development and Flutter for mobile app development. I am constantly striving to enhance my coding skills and develop innovative solutions. In addition to my technical pursuits, I have a creative side as well - I enjoy playing the saxophone. 🎷
+          As a Software Engineer with a passion for both mobile and web technologies, I specialize in creating applications and websites. My expertise lies in using Next Js, Dart, Firebase for web development and Flutter for mobile app development. I am constantly striving to enhance my coding skills and develop innovative solutions. In addition to my technical pursuits, I have a creative side as well - I enjoy playing the saxophone. 🎷
           </p>
           <div className="flex flex-wrap gap-2">
             {['Flutter', 'Next Js', 'Dart', 'Firebase' ].map((skill) => (
