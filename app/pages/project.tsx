@@ -11,7 +11,7 @@ const Projects = () => {
       title: "E-commerce Platform",
       description: "Full-stack e-commerce solution with HTML, Tailwind, JS and firebase",
       tech: ["HTML", "Tailwind", "JS", "Firebase"],
-      image: "/public/images/beads.png",
+      image: "/beads.png",
       github: "#",
       live: "https://bead-ochre.vercel.app/"
     },
@@ -27,7 +27,7 @@ const Projects = () => {
       title: "Tracking App",
       description: "Mobile app for tracking location of missing phones",
       tech: ["Flutter", "Firebase", "GetX"],
-      image: "/public/images/tracker2.jpg",
+      image: "/tracker2.jpg",
       github: "https://github.com/Qharny/TrackerMate.git",
       live: "https://github.com/Qharny/TrackerMate/releases/download/v1.0.0/app-release.apk"
     },

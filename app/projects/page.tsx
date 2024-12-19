@@ -14,7 +14,7 @@ const AllProjects = () => {
           title: "E-commerce Platform",
           description: "Full-stack e-commerce solution with HTML, Tailwind, JavaScript and firebase",
           tech: ["HTML", "Tailwind", "JavaScript", "Firebase"],
-          image: "/public/images/beads.png",
+          image: "/beads.png",
           github: "#",
           live: "https://bead-ochre.vercel.app/"
         },
@@ -22,7 +22,7 @@ const AllProjects = () => {
           title: "Food E-comerce Platform",
           description: "E-commerce solution with HTML, CSS, Tailwind ",
           tech: ["HTML", "CSS", "JavaScript"],
-          image: "/public/images/dine.png",
+          image: "/dine.png",
           github: "#",
           live: "https://lets-dine-six.vercel.app/"
         },
@@ -30,7 +30,7 @@ const AllProjects = () => {
           title: "Portfolio Website",
           description: "Personal portfolio showcasing skills and projects",
           tech: ["Next.js", "TypeScript", "Tailwind", "Shadcn/UI"],
-          image: "/public/images/portfolio.png",
+          image: "/portfolio.png",
           github: "#",
           live: "https://manassehkabutey.vercel.app/"
         },
@@ -38,7 +38,7 @@ const AllProjects = () => {
           title: "Shipping Company Portfolio",
           description: "Companies portfolio showcasing their service and products",
           tech: ["HTML", "CSS", "Tailwind", "JavaScript"],
-          image: "/public/images/tsk.png",
+          image: "/tsk.png",
           github: "#",
           live: "https://tsk-silk.vercel.app/"
         },
@@ -46,7 +46,7 @@ const AllProjects = () => {
           title: "Software Company Portfolio",
           description: "Companies portfolio showcasing their service and products",
           tech: ["HTML", "CSS", "Tailwind", "JavaScript"],
-          image: "/public/images/sparknest.png",
+          image: "/sparknest.png",
           github: "#",
           live: "https://sparknest.tech/"
         },
@@ -59,7 +59,7 @@ const AllProjects = () => {
           title: "Tracking App",
           description: "Mobile app for tracking location of missing phones",
           tech: ["Flutter", "Firebase", "GetX"],
-          image: "/public/images/tracker1.jpg",
+          image: "/tracker1.jpg",
           github: "https://github.com/Qharny/TrackerMate.git",
           live: "https://github.com/Qharny/TrackerMate/releases/download/v1.0.0/app-release.apk"
         },
@@ -67,7 +67,7 @@ const AllProjects = () => {
           title: "EduAtlas",
           description: "Platform for that shows University and Colleges by typing country name",
           tech: ["Flutter", "Dart"],
-          image: "/public/images/edu.png",
+          image: "/edu.jpg",
           github: "https://github.com/Qharny/EduAtlas_",
           live: "#"
         }
