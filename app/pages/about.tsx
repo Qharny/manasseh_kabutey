@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Badge } from '../components/UI/badge';
+import Image from 'next/image';
 
 const About = () => (
   <section className="py-20 bg-white dark:bg-gray-800">
@@ -8,17 +9,23 @@ const About = () => (
       <div className="grid items-center gap-8 md:grid-cols-2">
         <div className="space-y-4">
           <p className="text-gray-600 dark:text-gray-300">
-          As a Software Engineer with a passion for both mobile and web technologies, I specialize in creating applications and websites. My expertise lies in using Next Js, Dart, Firebase for web development and Flutter for mobile app development. I am constantly striving to enhance my coding skills and develop innovative solutions. In addition to my technical pursuits, I have a creative side as well - I enjoy playing the saxophone. 🎷
+            As a Software Engineer with a passion for both mobile and web technologies, I specialize in creating applications and websites. My expertise lies in using Next Js, Dart, Firebase for web development and Flutter for mobile app development. I&apos;m constantly striving to enhance my coding skills and develop innovative solutions. In addition to my technical pursuits, I have a creative side as well - I enjoy playing the saxophone. 🎷
           </p>
           <div className="flex flex-wrap gap-2">
-            {['Flutter', 'Next Js', 'Dart', 'Firebase' ].map((skill) => (
+            {['Flutter', 'Next Js', 'Dart', 'Firebase'].map((skill) => (
               <Badge key={skill} variant="secondary">{skill}</Badge>
             ))}
           </div>
         </div>
         <div className="relative h-64 bg-gray-200 rounded-lg dark:bg-gray-700">
           <div className="absolute inset-0 flex items-center justify-center">
-            <img src="https://raw.githubusercontent.com/Qharny/manasseh_kabutey/refs/heads/main/public/profile1.png?token=GHSAT0AAAAAACZHFHJVOMJLRYIJUD27CRL2Z2A6PXA" alt="Profile" className="w-32 h-32 rounded-full" />
+            <Image 
+              src="/profile1.png" 
+              alt="Profile" 
+              className="w-32 h-32 rounded-full" 
+              width={128}
+              height={128}
+            />
           </div>
         </div>
       </div>

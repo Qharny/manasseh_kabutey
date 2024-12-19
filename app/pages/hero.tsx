@@ -17,7 +17,7 @@ const Hero = () => (
       />
       <div className="z-10 p-4 space-y-6 text-center">
         <h1 className="text-4xl font-bold md:text-6xl animate-fade-in">
-          Hi, I am <span className="text-blue-600 dark:text-blue-400">Manasseh Kabutey</span>
+          Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Manasseh Kabutey</span>
         </h1>
         <p className="text-xl text-gray-600 md:text-2xl dark:text-gray-300">
           A Software Engineer

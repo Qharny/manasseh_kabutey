@@ -34,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDark }) => {
     }`}>
       <div className="container px-4 mx-auto">
         <div className="flex items-center justify-between h-16">
-          <span className="text-xl font-bold">Portfolio</span>
+          <span className="text-xl font-bold">Kabutey</span>
           <div className="items-center hidden gap-4 md:flex">
             <Button variant="ghost" size="icon" onClick={toggleTheme}>
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}

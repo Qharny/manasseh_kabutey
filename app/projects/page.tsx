@@ -14,7 +14,7 @@ const AllProjects = () => {
           title: "E-commerce Platform",
           description: "Full-stack e-commerce solution with HTML, Tailwind, JavaScript and firebase",
           tech: ["HTML", "Tailwind", "JavaScript", "Firebase"],
-          image: "https://raw.githubusercontent.com/Qharny/manasseh_kabutey/refs/heads/main/public/images/beads.png?token=GHSAT0AAAAAACZHFHJVE4RJ2OMEM3X6JLLOZ2A5ZZA",
+          image: "/public/images/beads.png",
           github: "#",
           live: "https://bead-ochre.vercel.app/"
         },
@@ -22,7 +22,7 @@ const AllProjects = () => {
           title: "Food E-comerce Platform",
           description: "E-commerce solution with HTML, CSS, Tailwind ",
           tech: ["HTML", "CSS", "JavaScript"],
-          image: "https://raw.githubusercontent.com/Qharny/manasseh_kabutey/refs/heads/main/public/images/dine.png?token=GHSAT0AAAAAACZHFHJUWAYYDPSFCNPW6M3MZ2A523A",
+          image: "/public/images/dine.png",
           github: "#",
           live: "https://lets-dine-six.vercel.app/"
         },
@@ -30,7 +30,7 @@ const AllProjects = () => {
           title: "Portfolio Website",
           description: "Personal portfolio showcasing skills and projects",
           tech: ["Next.js", "TypeScript", "Tailwind", "Shadcn/UI"],
-          image: "https://raw.githubusercontent.com/Qharny/manasseh_kabutey/refs/heads/main/public/images/portfolio.png?token=GHSAT0AAAAAACZHFHJV2SQNMNCQAZ3KJPLWZ2A53XQ",
+          image: "/public/images/portfolio.png",
           github: "#",
           live: "https://manassehkabutey.vercel.app/"
         },
@@ -38,7 +38,7 @@ const AllProjects = () => {
           title: "Shipping Company Portfolio",
           description: "Companies portfolio showcasing their service and products",
           tech: ["HTML", "CSS", "Tailwind", "JavaScript"],
-          image: "https://raw.githubusercontent.com/Qharny/manasseh_kabutey/refs/heads/main/public/images/tsk.png?token=GHSAT0AAAAAACZHFHJVSPL65FXNHY7YP4OYZ2A56IA",
+          image: "/public/images/tsk.png",
           github: "#",
           live: "https://tsk-silk.vercel.app/"
         },
@@ -46,7 +46,7 @@ const AllProjects = () => {
           title: "Software Company Portfolio",
           description: "Companies portfolio showcasing their service and products",
           tech: ["HTML", "CSS", "Tailwind", "JavaScript"],
-          image: "https://raw.githubusercontent.com/Qharny/manasseh_kabutey/refs/heads/main/public/images/sparknest.png?token=GHSAT0AAAAAACZHFHJUL2W7JCD6IL2YKKLKZ2A5YGA",
+          image: "/public/images/sparknest.png",
           github: "#",
           live: "https://sparknest.tech/"
         },
@@ -59,7 +59,7 @@ const AllProjects = () => {
           title: "Tracking App",
           description: "Mobile app for tracking location of missing phones",
           tech: ["Flutter", "Firebase", "GetX"],
-          image: "https://raw.githubusercontent.com/Qharny/manasseh_kabutey/refs/heads/main/public/images/tracker1.jpg?token=GHSAT0AAAAAACZHFHJVWTJB7DBJKUKGIYFCZ2A54PA",
+          image: "/public/images/tracker1.jpg",
           github: "https://github.com/Qharny/TrackerMate.git",
           live: "https://github.com/Qharny/TrackerMate/releases/download/v1.0.0/app-release.apk"
         },
@@ -67,7 +67,7 @@ const AllProjects = () => {
           title: "EduAtlas",
           description: "Platform for that shows University and Colleges by typing country name",
           tech: ["Flutter", "Dart"],
-          image: "https://raw.githubusercontent.com/Qharny/manasseh_kabutey/refs/heads/main/public/images/edu.jpg?token=GHSAT0AAAAAACZHFHJVKFOHV67ZW6NUREI2Z2A6N5Q",
+          image: "/public/images/edu.png",
           github: "https://github.com/Qharny/EduAtlas_",
           live: "#"
         }
