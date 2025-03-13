@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { Badge } from '../components/UI/badge';
-import Image from 'next/image';
 
 const About = () => (
   <section className="py-20 bg-white dark:bg-gray-800">
@@ -17,14 +16,13 @@ const About = () => (
             ))}
           </div>
         </div>
-        <div className="relative h-64 bg-gray-200 rounded-lg dark:bg-gray-700">
+        <div className="relative h-64 rounded-lg">
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image 
-              src="/profile1.png" 
+
+            <img 
+              src="/person.svg"
               alt="Profile" 
-              className="w-32 h-32 rounded-full" 
-              width={128}
-              height={128}
+              className="w-72 h-72 rounded-full" 
             />
           </div>
         </div>
