@@ -34,14 +34,14 @@ const Hero = () => {
         (window as any).particlesJS('particles-js', {
           particles: {
             number: { value: 50 },
-            color: { value: '#000' },
+            color: { value: '#0000ff' },
             shape: { type: 'circle' },
             opacity: { value: 0.8, random: true },
             size: { value: 3 },
             line_linked: {
               enable: true,
               distance: 150,
-              color: '#fff',
+              color: '#0000ff',
               opacity: 0.4,
               width: 1
             },
