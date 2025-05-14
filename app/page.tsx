@@ -10,6 +10,7 @@ import { Button } from './components/UI/button';
 import Education from './components/education';
 import Footer from './components/footer';
 import { useTheme } from './hooks/use-theme';
+import Chatbot from './components/Chatbot';
 
 interface NavbarProps {
   toggleTheme: () => void;
@@ -75,6 +76,7 @@ const Page = () => {
         <Projects />
         <Education />
         <ContactSection />
+        <Chatbot />
         <Footer/>
       </div>
     </div>
