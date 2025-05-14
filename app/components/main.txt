@@ -11,70 +11,6 @@ interface Message {
   timestamp: Date;
 }
 
-// Portfolio information database
-const portfolioData = {
-  personal: {
-    name: "Manasseh",
-    email: "kabuteymanasseh5@gmail.com",
-    location: "Ghana",
-    about: "I'm a passionate software developer with experience in mobile and web development."
-  },
-  experience: [
-    {
-      title: "Mobile Developer Intern",
-      company: "Cross Switch LTD",
-      period: "2023",
-      description: "Developed mobile applications using Flutter and Dart."
-    },
-    {
-      title: "Mobile Developer Intern",
-      company: "EvoSoft Tech",
-      period: "2022",
-      description: "Worked on Android applications using Kotlin."
-    },
-    {
-      title: "Web Developer",
-      company: "Freelance",
-      period: "2021-Present",
-      description: "Created responsive websites using modern technologies."
-    }
-  ],
-  education: [
-    {
-      degree: "Bachelor of Science in Computer Science and Engineering",
-      institution: "University of Mines and Technology (UMaT)",
-      year: "2018-2022"
-    },
-    {
-      degree: "Certificate in Software Development",
-      institution: "GI-KACE",
-      year: "2022"
-    }
-  ],
-  skills: {
-    languages: ["Dart", "JavaScript", "PHP", "Python", "Kotlin", "TypeScript"],
-    frameworks: ["Flutter", "Next.js", "React", "Node.js", "Express"],
-    other: ["Tailwind CSS", "Firebase", "MongoDB", "Git", "RESTful APIs", "SQL"]
-  },
-  projects: [
-    {
-      name: "Smart Exam Attendance System",
-      description: "An automated system for tracking student attendance during exams using facial recognition.",
-      technologies: ["Python", "OpenCV", "Flask"]
-    },
-    {
-      name: "EduAtlas",
-      description: "Educational platform connecting students with tutors and resources.",
-      technologies: ["React", "Node.js", "MongoDB"]
-    },
-    {
-      name: "TrackerMate",
-      description: "A mobile app for tracking personal habits and daily activities.",
-      technologies: ["Flutter", "Firebase"]
-    }
-  ]
-};
-
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -88,6 +24,7 @@ const Chatbot = () => {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const { theme } = useTheme();
+  const GOOGLE_API_KEY = "AIzaSyAjcBOB-QqqsUkCIeJjDpMzEcr9e2alCm0";
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -112,7 +49,9 @@ const Chatbot = () => {
     setIsLoading(true);
 
     try {
-      const response = await generateResponse(inputValue);
+      // This is a simulated response since we can't directly use the API key in the frontend
+      // In a real application, this should be handled through a backend service
+      const response = await simulateAIResponse(inputValue);
       
       const botMessage: Message = {
         text: response,
@@ -134,102 +73,27 @@ const Chatbot = () => {
     }
   };
 
-  // Natural language understanding and response generation
-  const generateResponse = async (query: string): Promise<string> => {
+  // Simulate AI response (in production, this would call the actual Google API through a backend)
+  const simulateAIResponse = async (query: string): Promise<string> => {
     // Simulate network delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    const normalizedQuery = query.toLowerCase();
-    
-    // Greetings
-    if (/^(hi|hello|hey|greetings|howdy|good (morning|afternoon|evening))$/i.test(normalizedQuery)) {
-      return "Hello! I'm Manasseh's portfolio assistant. How can I help you today?";
+    // Simple response logic
+    if (query.toLowerCase().includes("experience") || query.toLowerCase().includes("work")) {
+      return "Manasseh has experience as a Mobile Developer Intern at Cross Switch LTD and EvoSoft Tech, as well as Web Development experience. You can check the Experience page for more details!";
+    } else if (query.toLowerCase().includes("skill") || query.toLowerCase().includes("technology")) {
+      return "Manasseh is skilled in Dart, JavaScript, PHP, Python, Kotlin, Flutter, Next.js, Node.js, Tailwind CSS, and more. Check out the Skills page!";
+    } else if (query.toLowerCase().includes("project")) {
+      return "Manasseh has worked on several projects including Smart Exam Attendance System, EduAtlas, TrackerMate, and more. Visit the Projects page for details!";
+    } else if (query.toLowerCase().includes("contact") || query.toLowerCase().includes("email") || query.toLowerCase().includes("reach")) {
+      return "You can contact Manasseh via email at kabuteymanasseh5@gmail.com or check the Contact page for more options.";
+    } else if (query.toLowerCase().includes("education") || query.toLowerCase().includes("study")) {
+      return "Manasseh has a Bachelor of Science in Computer Science and Engineering from University of Mines and Technology (UMaT) and a Certificate in Software Development from GI-KACE.";
+    } else if (query.toLowerCase().includes("hello") || query.toLowerCase().includes("hi")) {
+      return "Hello! How can I help you learn more about Manasseh today?";
+    } else {
+      return "Thanks for your message! If you'd like to know more about Manasseh's skills, projects, experience, or contact information, feel free to ask specific questions.";
     }
-    
-    // Check for common questions in multiple ways
-    if (containsAny(normalizedQuery, ["who", "about", "tell me about", "info about", "biography", "background"]) && 
-        containsAny(normalizedQuery, ["you", "manasseh", "himself", "portfolio owner"])) {
-      return `${portfolioData.personal.about} He's currently based in ${portfolioData.personal.location} and specializes in mobile and web development.`;
-    }
-
-    // Experience queries
-    if (containsAny(normalizedQuery, ["work", "job", "experience", "career", "profession", "employment"])) {
-      const experiences = portfolioData.experience.map(exp => 
-        `${exp.title} at ${exp.company} (${exp.period}): ${exp.description}`
-      ).join("\n\n");
-      
-      return `Here's Manasseh's work experience:\n\n${experiences}\n\nWould you like more details about any specific role?`;
-    }
-
-    // Skills queries
-    if (containsAny(normalizedQuery, ["skill", "technology", "tech stack", "programming", "language", "framework", "tool"])) {
-      return `Manasseh is skilled in:\n\n• Languages: ${portfolioData.skills.languages.join(", ")}\n• Frameworks: ${portfolioData.skills.frameworks.join(", ")}\n• Other: ${portfolioData.skills.other.join(", ")}\n\nIs there a specific technology you'd like to know more about?`;
-    }
-
-    // Project queries
-    if (containsAny(normalizedQuery, ["project", "portfolio", "work", "created", "built", "developed", "app", "application", "website"])) {
-      const projects = portfolioData.projects.map(proj => 
-        `${proj.name}: ${proj.description} (Built with: ${proj.technologies.join(", ")})`
-      ).join("\n\n");
-      
-      return `Here are some of Manasseh's notable projects:\n\n${projects}\n\nWould you like me to elaborate on any specific project?`;
-    }
-
-    // Education queries
-    if (containsAny(normalizedQuery, ["education", "study", "degree", "university", "college", "school", "certificate", "qualification"])) {
-      const education = portfolioData.education.map(edu => 
-        `${edu.degree} from ${edu.institution} (${edu.year})`
-      ).join("\n\n");
-      
-      return `Manasseh's educational background:\n\n${education}`;
-    }
-
-    // Contact queries
-    if (containsAny(normalizedQuery, ["contact", "reach", "email", "phone", "message", "get in touch", "connect", "hire"])) {
-      return `You can contact Manasseh via email at ${portfolioData.personal.email}. Would you like me to provide more contact information?`;
-    }
-
-    // Specific project inquiries
-    const projectMatch = portfolioData.projects.find(project => 
-      normalizedQuery.includes(project.name.toLowerCase())
-    );
-    
-    if (projectMatch) {
-      return `${projectMatch.name} is a ${projectMatch.description} It was built using ${projectMatch.technologies.join(", ")}. Would you like to know more about this or other projects?`;
-    }
-
-    // Specific technology inquiries
-    const allTechnologies = [
-      ...portfolioData.skills.languages, 
-      ...portfolioData.skills.frameworks, 
-      ...portfolioData.skills.other
-    ];
-    
-    const techMatch = allTechnologies.find(tech => 
-      normalizedQuery.includes(tech.toLowerCase())
-    );
-    
-    if (techMatch) {
-      return `Yes, Manasseh is proficient in ${techMatch}. Would you like to know about other technologies he uses or projects where he's applied ${techMatch}?`;
-    }
-
-    // Thanks or appreciation
-    if (containsAny(normalizedQuery, ["thanks", "thank you", "appreciate", "helpful"])) {
-      return "You're welcome! I'm happy to help. Is there anything else you'd like to know about Manasseh?";
-    }
-
-    // Goodbye
-    if (containsAny(normalizedQuery, ["bye", "goodbye", "see you", "farewell"])) {
-      return "Thank you for your interest in Manasseh's portfolio! Feel free to return if you have more questions. Have a great day!";
-    }
-
-    // For queries that don't match any category
-    return "I'm not sure I understood your question. You can ask me about Manasseh's experience, skills, projects, education, or contact information. How can I help you learn more about Manasseh?";
-  };
-
-  // Helper function to check if a string contains any of the keywords
-  const containsAny = (text: string, keywords: string[]): boolean => {
-    return keywords.some(keyword => text.includes(keyword.toLowerCase()));
   };
 
   return (
