@@ -44,11 +44,11 @@ const Footer = () => {
       url: 'https://twitter.com/mr_kabuteyy',
       icon: Twitter,
     },
-    // {
-    //   name: 'Instagram',
-    //   url: 'https://www.instagram.com/mr_kabuteyy',
-    //   icon: Instagram,
-    // },
+    {
+      name: 'Instagram',
+      url: 'https://www.instagram.com/mr_kabuteyy',
+      icon: Instagram,
+    },
     {
       name: 'Dev.to',
       url: 'https://dev.to/mr_kabuteyy',
