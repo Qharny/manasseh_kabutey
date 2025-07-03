@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Github } from "lucide-react";
+import { title } from "process";
 
 const AllProjects = () => {
   const projectCategories = [
@@ -56,6 +57,14 @@ const AllProjects = () => {
       category: "Mobile Development",
       projects: [
         {
+          title: "Face Recognition Attendance System",
+          description: "FacePassX is a Flutter-based mobile application that uses facial recognition technology to automate student attendance tracking in educational institutions. The system provides a secure, efficient, and contactless method for recording student attendance.",
+          tech: ["Flutter", "supabase", "Custom API endpoint"],
+          image: "/face.png",
+          github: "",
+          live: "https://github.com/Qharny/FacePassX/releases/download/v1.1.0/app-release.apk"
+        },
+        {
           title: "Tracking App",
           description: "Mobile app for tracking location of missing phones",
           tech: ["Flutter", "Firebase", "GetX"],
@@ -70,12 +79,28 @@ const AllProjects = () => {
           image: "/edu.jpg",
           github: "https://github.com/Qharny/EduAtlas_",
           live: "#"
+        },
+        {
+          title: "AaeroGuard",
+          description: "AeroGuard is a sophisticated IoT smoke detector application built with Flutter and Firebase. It provides real-time monitoring and alerts for smoke detection through various IoT devices such as ESP8266, ESP32, and Arduino.",
+          tech: ["Flutter", "Firebase", "IoT"],
+          image: "/home.png",
+          github: "",
+          live: "#"
         }
       ]
     },
     {
       category: "Console Application",
       projects: [
+        {
+          title: "Zip Extractor",
+          description: "A powerful, user-friendly command-line tool to extract multiple ZIP files from a source directory to multiple destination directories simultaneously.",
+          tech: ["dart"],
+          image: "/zip.png",
+          github: "https://github.com/Qharny/zip_extractor.git",
+          live: "https://github.com/Qharny/zip_extractor/releases/tag/v1.0.0"
+        },
         {
           title: "Evoting System",
           description: "A voting system for elections",
