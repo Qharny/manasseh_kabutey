@@ -10,7 +10,7 @@ interface Education {
   location: string;
   period: string;
   description: string;
-  achievements?: string[]; // Optional property
+  achievements?: string[];
   relevantCourses: string[];
 }
 
@@ -50,24 +50,24 @@ const educationData = [
       "Web Development",
     ],
   },
-  {
-    degree: "High School Diploma",
-    institution: "Sogakope Senior High",
-    location: "Sogakope, Volta Ghana",
-    period: "2018 - 2021",
-    description: "Completed secondary education with distinction in Science and Mathematics.",
-    achievements: [
-      "Valedictorian",
-      "Member of Coding Club",
-    //   "National Science & Math Competition Finalist",
-    ],
-    relevantCourses: [
-      "Elective Mathematics",
-      "Elective Information and Communicaation Technology",
-      "Physics",
-      "Chemistry",
-    ],
-  },
+  // {
+  //   degree: "High School Diploma",
+  //   institution: "Sogakope Senior High",
+  //   location: "Sogakope, Volta Ghana",
+  //   period: "2018 - 2021",
+  //   description: "Completed secondary education with distinction in Science and Mathematics.",
+  //   achievements: [
+  //     "Valedictorian",
+  //     "Member of Coding Club",
+  //   //   "National Science & Math Competition Finalist",
+  //   ],
+  //   relevantCourses: [
+  //     "Elective Mathematics",
+  //     "Elective Information and Communicaation Technology",
+  //     "Physics",
+  //     "Chemistry",
+  //   ],
+  // },
 ];
 
 const EducationCard: React.FC<{ education: Education }> = ({ education }) => (
