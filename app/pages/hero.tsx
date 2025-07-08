@@ -14,7 +14,7 @@ const Hero = () => {
   const handleDownloadCV = () => {
     console.log('Downloading CV...');
     const link = document.createElement('a');
-    link.href = 'https://github.com/Qharny/manasseh_kabutey/blob/main/public/KABUTEY%20MANASSEH%20KWAME%20(CV).pdf';
+    link.href = '/MANASSEH%20KWAME%20KABUTEY_CV.pdf';
     link.download = 'Manasseh_Kabutey_CV.pdf';
     document.body.appendChild(link);
     link.click();
