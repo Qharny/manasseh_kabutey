@@ -32,6 +32,30 @@ GMAIL_APP_PASSWORD=your_app_password_here
 
 ## Troubleshooting
 
+### Authentication Error (535-5.7.8)
+
+If you see this error: `535-5.7.8 Username and Password not accepted`, follow these steps:
+
+#### Option 1: Use App Password (Recommended)
+1. Go to https://myaccount.google.com/
+2. Enable 2-Step Verification if not already enabled
+3. Go to Security → 2-Step Verification → App passwords
+4. Select "Mail" and "Other (Custom name)"
+5. Enter "Portfolio Contact Form" as the name
+6. Click "Generate" and copy the 16-character password
+7. Update your `.env.local` file with the new app password
+
+#### Option 2: Enable Less Secure Apps (Temporary)
+1. Go to https://myaccount.google.com/lesssecureapps
+2. Turn on "Allow less secure apps"
+3. Try the contact form again
+
+#### Option 3: Check Your Current Setup
+- Verify your `.env.local` file exists in the project root
+- Make sure the `GMAIL_APP_PASSWORD` is correct (no extra spaces)
+- Restart your development server after changing environment variables
+
+### Other Issues
 - If emails aren't sending, check your Gmail app password
 - Make sure your Gmail account allows "less secure app access" or use app passwords
 - Check the console for any error messages

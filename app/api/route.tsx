@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-declare module 'nodemailer';
+declare module 'nodemailer'
 
 export async function POST(request: Request) {
   try {
