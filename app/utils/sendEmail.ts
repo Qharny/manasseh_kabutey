@@ -1,14 +1,12 @@
 import nodemailer from 'nodemailer';
 
 export const sendEmail = async ({ name, email, message }: { name: string; email: string; message: string }) => {
-    // Create a transporter object using SMTP
+    // Create a transporter object using Gmail SMTP
     const transporter = nodemailer.createTransport({
-        host: 'smtp.example.com', // Replace with your SMTP server
-        port: 587, // Replace with your SMTP port
-        secure: false, // true for 465, false for other ports
+        service: 'gmail',
         auth: {
-            user: 'kabuteymanasseh5@gmail.com', // Replace with your email
-            pass: 'Manasseh12#', // Replace with your email password
+            user: 'kabuteymanasseh5@gmail.com',
+            pass: process.env.GMAIL_APP_PASSWORD || 'zmnt dnad zuyq vsys', // Use environment variable for security
         },
     });
 
