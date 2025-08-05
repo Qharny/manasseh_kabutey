@@ -22,9 +22,9 @@ const blogPosts: BlogPost[] = [
     title: "Launching My New Portfolio Website",
     excerpt: "Excited to share my new portfolio website built with Next.js and Tailwind CSS. This project represents my journey in web development and showcases my skills in modern frontend technologies.",
     content: `
-      <p>I'm thrilled to announce the launch of my new portfolio website! This has been a project I've been working on for the past few months, and I'm excited to finally share it with the world.</p>
+      <p>I&apos;m thrilled to announce the launch of my new portfolio website! This has been a project I&apos;ve been working on for the past few months, and I&apos;m excited to finally share it with the world.</p>
       
-      <h2>What's New?</h2>
+      <h2>What&apos;s New?</h2>
       <p>This portfolio represents a significant upgrade from my previous version. Built with Next.js 14 and Tailwind CSS, it features:</p>
       <ul>
         <li>Modern, responsive design that works on all devices</li>
@@ -53,7 +53,7 @@ const blogPosts: BlogPost[] = [
         <li>Blog section for sharing thoughts and updates</li>
       </ul>
       
-      <h2>What's Next?</h2>
+      <h2>What&apos;s Next?</h2>
       <p>This is just the beginning! I plan to continuously improve the portfolio by:</p>
       <ul>
         <li>Adding more interactive elements</li>
@@ -62,7 +62,7 @@ const blogPosts: BlogPost[] = [
         <li>Adding more projects as I complete them</li>
       </ul>
       
-      <p>I'm excited to see how this portfolio evolves and helps me connect with potential clients and collaborators. Feel free to explore the site and let me know what you think!</p>
+      <p>I&apos;m excited to see how this portfolio evolves and helps me connect with potential clients and collaborators. Feel free to explore the site and let me know what you think!</p>
     `,
     date: "December 15, 2024",
     category: "Project Launch",
@@ -72,17 +72,17 @@ const blogPosts: BlogPost[] = [
   {
     id: 2,
     title: "The Power of Consistency in Software Development",
-    excerpt: "Today's motivational thought: Success in software development isn't about being perfect every day, but about showing up consistently. Small improvements compound over time into remarkable results.",
+    excerpt: "Today&apos;s motivational thought: Success in software development isn&apos;t about being perfect every day, but about showing up consistently. Small improvements compound over time into remarkable results.",
     content: `
       <p>Today I want to share a thought that has been on my mind lately - the incredible power of consistency in software development.</p>
       
       <h2>Why Consistency Matters</h2>
-      <p>In the world of software development, it's easy to get caught up in the pursuit of perfection. We see amazing projects on GitHub, read about successful developers, and sometimes feel like we need to be perfect from day one.</p>
+      <p>In the world of software development, it&apos;s easy to get caught up in the pursuit of perfection. We see amazing projects on GitHub, read about successful developers, and sometimes feel like we need to be perfect from day one.</p>
       
       <p>But here&apos;s the truth: <strong>Success in software development isn&apos;t about being perfect every day, but about showing up consistently.</strong></p>
       
       <h2>The Compound Effect</h2>
-      <p>Small improvements, when applied consistently over time, compound into remarkable results. Here's what I mean:</p>
+      <p>Small improvements, when applied consistently over time, compound into remarkable results. Here&apos;s what I mean:</p>
       <ul>
         <li>Writing code for 30 minutes every day</li>
         <li>Learning one new concept each week</li>
@@ -93,9 +93,9 @@ const blogPosts: BlogPost[] = [
       <p>These small actions, when done consistently, create a powerful momentum that leads to significant growth over time.</p>
       
       <h2>My Personal Experience</h2>
-      <p>I've found that the days when I feel most productive aren't necessarily the days when I code for 8 hours straight. Instead, they're the days when I maintain my daily routine:</p>
+      <p>I&apos;ve found that the days when I feel most productive aren&apos;t necessarily the days when I code for 8 hours straight. Instead, they&apos;re the days when I maintain my daily routine:</p>
       <ul>
-        <li>Morning: Review yesterday's code and plan today's tasks</li>
+        <li>Morning: Review yesterday&apos;s code and plan today&apos;s tasks</li>
         <li>Afternoon: Focus on coding and problem-solving</li>
         <li>Evening: Learn something new or work on side projects</li>
       </ul>
@@ -104,16 +104,16 @@ const blogPosts: BlogPost[] = [
       <p>Here are some strategies that have worked for me:</p>
       <ol>
         <li><strong>Start Small</strong> - Begin with just 15-30 minutes of coding daily</li>
-        <li><strong>Track Your Progress</strong> - Use tools like GitHub's contribution graph to visualize your consistency</li>
-        <li><strong>Set Realistic Goals</strong> - Don't try to learn everything at once</li>
+        <li><strong>Track Your Progress</strong> - Use tools like GitHub&apos;s contribution graph to visualize your consistency</li>
+        <li><strong>Set Realistic Goals</strong> - Don&apos;t try to learn everything at once</li>
         <li><strong>Create a Routine</strong> - Find a time that works for you and stick to it</li>
         <li><strong>Celebrate Small Wins</strong> - Acknowledge your progress, no matter how small</li>
       </ol>
       
       <h2>Remember</h2>
-      <p>Every expert was once a beginner. The difference between those who succeed and those who don't is often not talent or intelligence, but consistency and persistence.</p>
+      <p>Every expert was once a beginner. The difference between those who succeed and those who don&apos;t is often not talent or intelligence, but consistency and persistence.</p>
       
-      <p>So today, focus on showing up. Tomorrow, show up again. And the day after that. Before you know it, you'll look back and be amazed at how far you've come.</p>
+      <p>So today, focus on showing up. Tomorrow, show up again. And the day after that. Before you know it, you&apos;ll look back and be amazed at how far you&apos;ve come.</p>
       
       <p><em>"The only way to do great work is to love what you do." - Steve Jobs</em></p>
     `,
@@ -125,12 +125,12 @@ const blogPosts: BlogPost[] = [
   {
     id: 3,
     title: "Why I Choose Flutter for Mobile Development",
-    excerpt: "Exploring the reasons behind my preference for Flutter over other mobile development frameworks. From cross-platform efficiency to the Dart language, here's what makes Flutter my go-to choice.",
+    excerpt: "Exploring the reasons behind my preference for Flutter over other mobile development frameworks. From cross-platform efficiency to the Dart language, here&apos;s what makes Flutter my go-to choice.",
     content: `
-      <p>When it comes to mobile app development, I've explored various frameworks and technologies. After working with React Native, Xamarin, and native development, I've found myself consistently choosing Flutter for my mobile projects. Let me share why.</p>
+      <p>When it comes to mobile app development, I&apos;ve explored various frameworks and technologies. After working with React Native, Xamarin, and native development, I&apos;ve found myself consistently choosing Flutter for my mobile projects. Let me share why.</p>
       
       <h2>What is Flutter?</h2>
-      <p>Flutter is Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language and provides a rich set of pre-built widgets.</p>
+      <p>Flutter is Google&apos;s UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language and provides a rich set of pre-built widgets.</p>
       
       <h2>Why Flutter Stands Out</h2>
       
@@ -143,7 +143,7 @@ const blogPosts: BlogPost[] = [
       </ul>
       
       <h3>2. Hot Reload</h3>
-      <p>One of Flutter's most beloved features is hot reload. This allows developers to:</p>
+      <p>One of Flutter&apos;s most beloved features is hot reload. This allows developers to:</p>
       <ul>
         <li>See changes instantly without losing app state</li>
         <li>Experiment with UI changes rapidly</li>
@@ -159,7 +159,7 @@ const blogPosts: BlogPost[] = [
       </ul>
       
       <h3>4. Dart Language</h3>
-      <p>Dart is a modern, object-oriented language that's:</p>
+      <p>Dart is a modern, object-oriented language that&apos;s:</p>
       <ul>
         <li>Easy to learn for developers familiar with Java, C#, or JavaScript</li>
         <li>Strongly typed, reducing runtime errors</li>
@@ -167,7 +167,7 @@ const blogPosts: BlogPost[] = [
       </ul>
       
       <h2>Performance Benefits</h2>
-      <p>Flutter's performance is impressive because:</p>
+      <p>Flutter&apos;s performance is impressive because:</p>
       <ul>
         <li>It compiles to native ARM code</li>
         <li>Uses Skia graphics engine for smooth animations</li>
@@ -176,7 +176,7 @@ const blogPosts: BlogPost[] = [
       </ul>
       
       <h2>Development Experience</h2>
-      <p>From a developer's perspective, Flutter offers:</p>
+      <p>From a developer&apos;s perspective, Flutter offers:</p>
       <ul>
         <li>Excellent IDE support with VS Code and Android Studio</li>
         <li>Comprehensive documentation and community support</li>
@@ -205,7 +205,7 @@ const blogPosts: BlogPost[] = [
       <h2>Conclusion</h2>
       <p>While every project has unique requirements, Flutter has become my go-to choice for mobile development. Its combination of performance, developer experience, and cross-platform capabilities makes it an excellent choice for modern app development.</p>
       
-      <p>If you're considering mobile development, I highly recommend giving Flutter a try. The learning curve is manageable, and the rewards are substantial.</p>
+      <p>If you&apos;re considering mobile development, I highly recommend giving Flutter a try. The learning curve is manageable, and the rewards are substantial.</p>
     `,
     date: "December 5, 2024",
     category: "Tech Insights",
