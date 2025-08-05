@@ -1,54 +1,37 @@
-# Email Setup Instructions
+# Email Setup Guide
 
-To enable email functionality in your portfolio, follow these steps:
+## Environment Variables
 
-## 1. Create Gmail App Password
+Create a `.env.local` file in your project root with the following variables:
 
-1. Go to your Google Account settings: https://myaccount.google.com/
-2. Navigate to "Security" → "2-Step Verification" (enable if not already enabled)
-3. Go to "App passwords" (under 2-Step Verification)
-4. Select "Mail" and "Other (Custom name)"
-5. Enter a name like "Portfolio Contact Form"
-6. Click "Generate"
-7. Copy the 16-character app password
-
-## 2. Create Environment File
-
-Create a file named `.env.local` in your project root with the following content:
-
-```
-GMAIL_APP_PASSWORD=your-16-character-app-password-here
+```env
+GMAIL_USER=kabuteymanasseh5@gmail.com
+GMAIL_APP_PASSWORD=your_app_password_here
 ```
 
-Replace `your-16-character-app-password-here` with the app password you generated in step 1.
+## Gmail App Password Setup
 
-## 3. Restart Your Development Server
+1. Go to your Google Account settings
+2. Enable 2-Factor Authentication if not already enabled
+3. Go to Security → App passwords
+4. Generate a new app password for "Mail"
+5. Use this password in your `GMAIL_APP_PASSWORD` environment variable
 
-After creating the `.env.local` file, restart your development server:
-
-```bash
-npm run dev
-```
-
-## 4. Test the Contact Form
-
-1. Go to your contact page
-2. Fill out the contact form
-3. Submit the form
-4. Check your email (kabuteymanasseh5@gmail.com) for the message
-
-## Important Notes
+## Security Notes
 
 - Never commit your `.env.local` file to version control
-- The app password is different from your regular Gmail password
-- If you change your Gmail password, you'll need to generate a new app password
-- The contact form will send emails to kabuteymanasseh5@gmail.com
+- For production deployment, set these environment variables in your hosting platform
+- The current setup uses your existing app password, but you should generate a new one for security
+
+## Testing
+
+1. Start your development server: `npm run dev`
+2. Go to your contact form
+3. Fill out and submit the form
+4. Check your email (kabuteymanasseh5@gmail.com) for the message
 
 ## Troubleshooting
 
-If emails are not being sent:
-
-1. Check that your Gmail app password is correct
-2. Ensure 2-Step Verification is enabled on your Google account
-3. Check the browser console for any error messages
-4. Verify that the `.env.local` file is in the project root directory
+- If emails aren't sending, check your Gmail app password
+- Make sure your Gmail account allows "less secure app access" or use app passwords
+- Check the console for any error messages
