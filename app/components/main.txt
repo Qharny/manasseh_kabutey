@@ -201,3 +201,287 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
+
+
+
+
+
+
+
+
+
+"use client";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { ArrowLeft, Calendar, Clock, Tag, Search } from 'lucide-react';
+import { Button } from '../components/UI/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/UI/card';
+import { Badge } from '../components/UI/badge';
+
+// Sample blog posts data
+const blogPosts = [
+  {
+    id: 'launching-my-portfolio',
+    title: 'Launching My Portfolio Website',
+    excerpt: 'After months of hard work and countless iterations, I\'m excited to finally launch my personal portfolio website. This project represents not just my technical skills, but also my journey as a developer.',
+    content: `
+      <p>After months of hard work and countless iterations, I'm excited to finally launch my personal portfolio website. This project represents not just my technical skills, but also my journey as a developer.</p>
+      
+      <h2>Why I Built This</h2>
+      <p>In today's digital world, having a strong online presence is crucial for any professional. As a software engineer, I wanted to create something that not only showcases my work but also reflects my personality and approach to problem-solving.</p>
+      
+      <h2>The Tech Stack</h2>
+      <p>I chose to build this portfolio using Next.js 14 with TypeScript, Tailwind CSS for styling, and deployed it on Vercel. The choice of Next.js was driven by its excellent performance, SEO capabilities, and developer experience.</p>
+      
+      <h2>Key Features</h2>
+      <ul>
+        <li>Responsive design that works on all devices</li>
+        <li>Dark/light mode toggle</li>
+        <li>Interactive project showcase</li>
+        <li>Contact form with email integration</li>
+        <li>Blog section for sharing insights</li>
+      </ul>
+      
+      <h2>What's Next</h2>
+      <p>This is just the beginning. I plan to regularly update this portfolio with new projects, blog posts about my experiences, and insights I gain along my journey. Stay tuned for more content!</p>
+    `,
+    date: '2024-01-15',
+    readTime: '5 min read',
+    tags: ['Portfolio', 'Next.js', 'Web Development'],
+    featured: true
+  },
+  {
+    id: 'motivational-quote-week',
+    title: 'Weekly Motivation: "The only way to do great work is to love what you do"',
+    excerpt: 'This week\'s motivational quote comes from Steve Jobs, and it perfectly encapsulates what drives me in my work as a software engineer.',
+    content: `
+      <p>This week's motivational quote comes from Steve Jobs, and it perfectly encapsulates what drives me in my work as a software engineer.</p>
+      
+      <blockquote class="border-l-4 border-blue-500 pl-4 my-6 italic text-lg">
+        "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle."
+        <footer class="text-sm mt-2">— Steve Jobs</footer>
+      </blockquote>
+      
+      <h2>Why This Quote Resonates</h2>
+      <p>As a software engineer, I've found that the most successful projects and the most innovative solutions come from a place of genuine passion and interest. When you love what you're working on, you naturally put in the extra effort, think more creatively, and persist through challenges.</p>
+      
+      <h2>Applying This to Development</h2>
+      <p>In the world of software development, this means:</p>
+      <ul>
+        <li>Choosing projects that genuinely interest you</li>
+        <li>Continuously learning new technologies that excite you</li>
+        <li>Contributing to open source projects you care about</li>
+        <li>Building solutions that solve real problems</li>
+      </ul>
+      
+      <h2>My Approach</h2>
+      <p>I try to apply this philosophy to every project I work on. Whether it's a mobile app, a web application, or a simple script, I look for ways to make it meaningful and engaging. This doesn't mean every project is perfect, but it does mean that I'm always learning and growing.</p>
+      
+      <h2>Challenge for You</h2>
+      <p>Take a moment to reflect on your current work. Do you love what you're doing? If not, what would you change? Sometimes the smallest adjustments can make the biggest difference in your satisfaction and success.</p>
+    `,
+    date: '2024-01-10',
+    readTime: '3 min read',
+    tags: ['Motivation', 'Career', 'Personal Growth'],
+    featured: false
+  },
+  {
+    id: 'new-project-sparknest',
+    title: 'Introducing SparkNest: A Revolutionary Task Management App',
+    excerpt: 'I\'m thrilled to announce the launch of SparkNest, a new task management application that combines simplicity with powerful features.',
+    content: `
+      <p>I'm thrilled to announce the launch of SparkNest, a new task management application that combines simplicity with powerful features.</p>
+      
+      <h2>What is SparkNest?</h2>
+      <p>SparkNest is a modern task management application built with Flutter that helps individuals and teams organize their work more effectively. Unlike traditional task managers, SparkNest focuses on the psychology of productivity and habit formation.</p>
+      
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>Smart Prioritization:</strong> AI-powered task prioritization based on deadlines, importance, and your work patterns</li>
+        <li><strong>Habit Tracking:</strong> Built-in habit formation tools to help you build productive routines</li>
+        <li><strong>Team Collaboration:</strong> Seamless team coordination with real-time updates</li>
+        <li><strong>Analytics Dashboard:</strong> Detailed insights into your productivity patterns</li>
+        <li><strong>Cross-Platform:</strong> Works on iOS, Android, and web</li>
+      </ul>
+      
+      <h2>The Development Journey</h2>
+      <p>This project took six months to develop, from initial concept to launch. The biggest challenges were:</p>
+      <ul>
+        <li>Designing an intuitive user interface that doesn't overwhelm users</li>
+        <li>Implementing real-time synchronization across devices</li>
+        <li>Optimizing performance for large task lists</li>
+        <li>Ensuring data privacy and security</li>
+      </ul>
+      
+      <h2>Tech Stack</h2>
+      <p>SparkNest was built using:</p>
+      <ul>
+        <li>Flutter for cross-platform development</li>
+        <li>Firebase for backend services</li>
+        <li>Provider for state management</li>
+        <li>SQLite for local storage</li>
+        <li>Dart for backend API</li>
+      </ul>
+      
+      <h2>What's Next</h2>
+      <p>The app is now available on both App Store and Google Play Store. I'm already working on version 2.0, which will include advanced analytics, team management features, and integrations with popular productivity tools.</p>
+      
+      <p>You can download SparkNest today and start organizing your tasks more effectively!</p>
+    `,
+    date: '2024-01-05',
+    readTime: '7 min read',
+    tags: ['Flutter', 'Mobile Development', 'Product Launch'],
+    featured: true
+  },
+  {
+    id: 'learning-react-native',
+    title: 'My Journey Learning React Native',
+    excerpt: 'After years of working with Flutter, I decided to expand my skills by learning React Native. Here\'s what I discovered.',
+    content: `
+      <p>After years of working with Flutter, I decided to expand my skills by learning React Native. Here's what I discovered.</p>
+      
+      <h2>Why React Native?</h2>
+      <p>While Flutter has been my go-to framework for mobile development, I wanted to understand the React Native ecosystem better. The JavaScript/TypeScript foundation and the vast npm ecosystem were appealing factors.</p>
+      
+      <h2>Initial Impressions</h2>
+      <p>Coming from Flutter, React Native felt both familiar and different:</p>
+      <ul>
+        <li><strong>Familiar:</strong> Component-based architecture, hot reload, cross-platform development</li>
+        <li><strong>Different:</strong> JavaScript instead of Dart, different styling approach, bridge architecture</li>
+      </ul>
+      
+      <h2>Key Learnings</h2>
+      <h3>1. JavaScript Ecosystem</h3>
+      <p>The npm ecosystem is massive, but it can be overwhelming. I learned to be more selective about dependencies and always check for maintenance and community support.</p>
+      
+      <h3>2. Styling Differences</h3>
+      <p>React Native uses a subset of CSS with Flexbox as the primary layout system. This was different from Flutter's widget-based approach, but I found it quite intuitive.</p>
+      
+      <h3>3. Performance Considerations</h3>
+      <p>The bridge between JavaScript and native code can be a performance bottleneck. I learned to use tools like Flipper for debugging and profiling.</p>
+      
+      <h2>Building My First App</h2>
+      <p>I built a simple weather app to practice React Native concepts:</p>
+      <ul>
+        <li>Used Expo for easier development setup</li>
+        <li>Implemented navigation with React Navigation</li>
+        <li>Added state management with Redux Toolkit</li>
+        <li>Integrated with a weather API</li>
+      </ul>
+      
+      <h2>Comparing with Flutter</h2>
+      <p>Both frameworks have their strengths:</p>
+      <ul>
+        <li><strong>Flutter:</strong> Better performance, single codebase, rich widget library</li>
+        <li><strong>React Native:</strong> JavaScript ecosystem, easier to find developers, more third-party libraries</li>
+      </ul>
+      
+      <h2>Future Plans</h2>
+      <p>I plan to continue learning React Native and potentially build a production app with it. The knowledge of both frameworks gives me more flexibility in choosing the right tool for each project.</p>
+    `,
+    date: '2023-12-28',
+    readTime: '6 min read',
+    tags: ['React Native', 'Mobile Development', 'Learning'],
+    featured: false
+  }
+];
+
+const BlogPage = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedTag, setSelectedTag] = useState('');
+
+  // Get all unique tags
+  const allTags = Array.from(new Set(blogPosts.flatMap(post => post.tags)));
+
+  // Filter posts based on search term and selected tag
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesTag = selectedTag === '' || post.tags.includes(selectedTag);
+    return matchesSearch && matchesTag;
+  });
+
+  return (
+    <div className="min-h-screen bg-white dark:bg-gray-900 dark:text-white">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container px-4 py-16 mx-auto">
+          <div className="flex items-center mb-6">
+            <Link href="/" className="flex items-center text-white hover:text-gray-200 transition-colors">
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Back to Portfolio
+            </Link>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Blog</h1>
+          <p className="text-xl text-gray-100 max-w-2xl">
+            Thoughts, insights, and updates from my journey as a software engineer.
+            From project launches to motivational quotes, here's what's on my mind.
+          </p>
+        </div>
+      </div>
+
+      {/* Search and Filter */}
+      <div className="container px-4 py-8 mx-auto">
+        <div className="flex flex-col md:flex-row gap-4 mb-8">
+          <div className="relative flex-1">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search posts..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <Button
+              variant={selectedTag === '' ? 'default' : 'outline'}
+              onClick={() => setSelectedTag('')}
+              className="text-sm"
+            >
+              All
+            </Button>
+            {allTags.map(tag => (
+              <Button
+                key={tag}
+                variant={selectedTag === tag ? 'default' : 'outline'}
+                onClick={() => setSelectedTag(tag)}
+                className="text-sm"
+              >
+                {tag}
+              </Button>
+            ))}
+          </div>
+        </div>
+
+        {/* Blog Posts Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredPosts.map((post) => (
+            <Card key={post.id} className="h-full hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    {new Date(post.date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                    <Clock className="w-4 h-4 mr-1" />
+                    {post.readTime}
+                  </div>
+                </div>
+                <CardTitle className="text-xl mb-2">
+                  <Link href={`/blog/${post.id}`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    {post.title}
+                  </Link>
+                </CardTitle>
+                <CardDescription className="text-base">
+                  {post.excerpt}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2 mb-4">
+          
