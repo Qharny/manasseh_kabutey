@@ -20,11 +20,11 @@ export async function POST(request: NextRequest) {
       { message: 'Email sent successfully!' },
       { status: 200 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Contact form error:', error);
     
     // Check if it's an authentication error
-    if (error.code === 'EAUTH') {
+    if (error && typeof error === 'object' && 'code' in error && error.code === 'EAUTH') {
       return NextResponse.json(
         { error: 'Email service authentication failed. Please check your Gmail settings.' },
         { status: 500 }

@@ -1,6 +1,6 @@
 "use client";
 import { useParams, useRouter } from 'next/navigation';
-import { ArrowLeft, Calendar, Clock, Tag } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import { Button } from '../../components/UI/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/UI/card';
 import { Badge } from '../../components/UI/badge';
@@ -79,7 +79,7 @@ const blogPosts: BlogPost[] = [
       <h2>Why Consistency Matters</h2>
       <p>In the world of software development, it's easy to get caught up in the pursuit of perfection. We see amazing projects on GitHub, read about successful developers, and sometimes feel like we need to be perfect from day one.</p>
       
-      <p>But here's the truth: <strong>Success in software development isn't about being perfect every day, but about showing up consistently.</strong></p>
+      <p>But here&apos;s the truth: <strong>Success in software development isn&apos;t about being perfect every day, but about showing up consistently.</strong></p>
       
       <h2>The Compound Effect</h2>
       <p>Small improvements, when applied consistently over time, compound into remarkable results. Here's what I mean:</p>
