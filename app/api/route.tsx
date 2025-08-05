@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-declare module 'nodemailer';
+declare module 'nodemailer'
 
 export async function POST(request: Request) {
   try {
@@ -17,10 +17,10 @@ export async function POST(request: Request) {
 
     // Create a transporter for sending emails
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // Use your email service
+      service: 'gmail',
       auth: {
         user: 'kabuteymanasseh5@gmail.com',
-        pass: 'your-email-password',
+        pass: process.env.GMAIL_APP_PASSWORD || 'zmnt dnad zuyq vsys',
       },
     })
 
