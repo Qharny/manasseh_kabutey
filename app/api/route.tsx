@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     // Set up email data
     const mailOptions = {
       from: email, // Sender address
-      to: 'recipient@example.com', // List of recipients
+      to: 'kabuteymanasseh5@gmail.com', // List of recipients
       subject: 'Contact Form Submission', // Subject line
       text: message, // Plain text body
       html: `<p>${message}</p>`, // HTML body

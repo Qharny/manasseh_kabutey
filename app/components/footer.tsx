@@ -76,7 +76,7 @@ const Footer = () => {
     },
     {
       name: 'Email',
-      url: 'mailto:kabuteymanasseh@gmail.com',
+      url: 'mailto:kabuteymanasseh5@gmail.com',
       icon: Mail,
     },
   ];
@@ -84,8 +84,8 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: Mail,
-      text: 'kabuteymanasseh@gmail.com',
-      href: 'mailto:kabuteymanasseh@gmail.com',
+      text: 'kabuteymanasseh5@gmail.com',
+      href: 'mailto:kabuteymanasseh5@gmail.com',
     },
     {
       icon: Phone,

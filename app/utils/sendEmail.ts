@@ -7,15 +7,15 @@ export const sendEmail = async ({ name, email, message }: { name: string; email:
         port: 587, // Replace with your SMTP port
         secure: false, // true for 465, false for other ports
         auth: {
-            user: 'kabuteymansseh5@gmail.com', // Replace with your email
+            user: 'kabuteymanasseh5@gmail.com', // Replace with your email
             pass: 'Manasseh12#', // Replace with your email password
         },
     });
 
     // Set up email data
     const mailOptions = {
-        from: '"Contact Form" <your-email@example.com>', // Sender address
-        to: 'recipient@example.com', // List of recipients
+        from: '"Contact Form" <kabuteymanasseh5@gmail.com>', // Sender address
+        to: 'kabuteymanasseh5@gmail.com', // List of recipients
         subject: 'New Contact Form Submission', // Subject line
         text: `You have a new message from ${name} (${email}): ${message}`, // Plain text body
     };
