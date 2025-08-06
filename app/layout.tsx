@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   title: 'Manasseh | Software Engineer',
   description: 'Software Engineer specializing in Mobile and Web technologies',
   keywords: ['Software Engineer', 'Full Stack Developer', 'Flutter Developer'],
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
 }
 
 export default function RootLayout({
@@ -18,11 +23,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/profile1.png" />
-        <link rel="shortcut icon" href="/profile1.png" />
-        <link rel="apple-touch-icon" href="/profile1.png" />
-      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
