@@ -20,6 +20,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/profile1.png" />
+        <link rel="shortcut icon" href="/profile1.png" />
+        <link rel="apple-touch-icon" href="/profile1.png" />
       </head>
       <body className={inter.className}>
         <ThemeProvider
