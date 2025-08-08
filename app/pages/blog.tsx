@@ -14,7 +14,7 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    id: 3,
+    id: 1,
     title: "50 Essential Tips for Every Developer",
     excerpt: "Whether you are starting to program or you are twenty years into your career, there is something here for you. Enjoy!",
     date: "March 22, 2025",
@@ -30,7 +30,7 @@ const blogPosts: BlogPost[] = [
     readTime: "3 min read"
   },
   {
-    id: 1,
+    id: 3,
     title: "The Power of Consistency in Software Development",
     excerpt: "Today&apos;s motivational thought: Success in software development isn&apos;t about being perfect every day, but about showing up consistently. Small improvements compound over time into remarkable results.",
     date: "December 10, 2024",
