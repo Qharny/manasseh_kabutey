@@ -16,10 +16,10 @@ const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "50 Essential Tips for Every Developer",
-    excerpt: "A comprehensive guide covering 50 essential tips that every developer should know, from coding best practices to career development and productivity hacks.",
-    date: "March 22, 2025",
+    excerpt: "Whether you are starting to program or you are twenty years into your career, there is something here for you. Enjoy!",
+    date: "October 18, 2020",
     category: "Development Tips",
-    readTime: "8 min read"
+    readTime: "3 min read"
   },
   {
     id: 2,
