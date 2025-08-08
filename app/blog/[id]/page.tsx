@@ -19,6 +19,335 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
+    title: "50 Essential Tips for Every Developer",
+    excerpt: "A comprehensive guide covering 50 essential tips that every developer should know, from coding best practices to career development and productivity hacks.",
+    content: `
+      <p>After years of experience in software development, I&apos;ve compiled 50 essential tips that every developer should know. These tips cover everything from coding best practices to career development and productivity hacks.</p>
+      
+      <div class="flex justify-center my-8">
+        <img src="/portfolio.png" alt="Developer Tips" class="rounded-lg shadow-lg max-w-md" />
+      </div>
+      
+      <h2>🏗️ Foundation & Best Practices</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">1. Write Clean, Readable Code</h3>
+          <p>Your code should be self-documenting. Use meaningful variable names and write comments for complex logic.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">2. Follow the DRY Principle</h3>
+          <p>Don&apos;t Repeat Yourself. Extract common functionality into reusable functions or classes.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">3. Use Version Control</h3>
+          <p>Git is essential. Learn it well and make meaningful commit messages.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">4. Write Tests</h3>
+          <p>Test-driven development (TDD) helps catch bugs early and improves code quality.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">5. Keep Functions Small</h3>
+          <p>A function should do one thing well. If it&apos;s doing multiple things, break it down.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">6. Use Meaningful Names</h3>
+          <p>Variables, functions, and classes should have descriptive names that explain their purpose.</p>
+        </div>
+      </div>
+      
+      <div class="flex justify-center my-8">
+        <img src="/home.png" alt="Coding Best Practices" class="rounded-lg shadow-lg max-w-md" />
+      </div>
+      
+      <h2>🚀 Performance & Optimization</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">7. Optimize Database Queries</h3>
+          <p>Use indexes, avoid N+1 queries, and understand your database&apos;s query planner.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">8. Implement Caching</h3>
+          <p>Cache frequently accessed data to improve performance and reduce server load.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">9. Minimize HTTP Requests</h3>
+          <p>Combine CSS/JS files, use sprites for images, and leverage CDNs.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">10. Use Async/Await</h3>
+          <p>Handle asynchronous operations properly to avoid blocking the main thread.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">11. Implement Lazy Loading</h3>
+          <p>Load resources only when needed to improve initial page load times.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">12. Use Compression</h3>
+          <p>Enable GZIP compression to reduce file sizes and improve load times.</p>
+        </div>
+      </div>
+      
+      <h2>🔒 Security Best Practices</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">13. Validate Input Data</h3>
+          <p>Always validate and sanitize user input to prevent injection attacks.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">14. Use HTTPS</h3>
+          <p>Encrypt data in transit to protect sensitive information.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">15. Implement Authentication</h3>
+          <p>Use secure authentication methods and never store passwords in plain text.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">16. Keep Dependencies Updated</h3>
+          <p>Regularly update libraries and frameworks to patch security vulnerabilities.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">17. Use Environment Variables</h3>
+          <p>Store sensitive configuration in environment variables, not in code.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">18. Implement Rate Limiting</h3>
+          <p>Protect your APIs from abuse by implementing rate limiting.</p>
+        </div>
+      </div>
+      
+      <div class="flex justify-center my-8">
+        <img src="/sparknest.png" alt="Security Practices" class="rounded-lg shadow-lg max-w-md" />
+      </div>
+      
+      <h2>🛠️ Development Workflow</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">19. Use a Linter</h3>
+          <p>Configure ESLint, Prettier, or similar tools to maintain code consistency.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">20. Set Up CI/CD</h3>
+          <p>Automate testing and deployment to catch issues early and deploy safely.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">21. Use Feature Branches</h3>
+          <p>Work on features in separate branches to keep the main branch stable.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">22. Code Review Everything</h3>
+          <p>Have another developer review your code before merging to main.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">23. Use TypeScript</h3>
+          <p>Add type safety to JavaScript to catch errors at compile time.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">24. Document Your Code</h3>
+          <p>Write clear documentation for APIs, functions, and complex algorithms.</p>
+        </div>
+      </div>
+      
+      <h2>📚 Learning & Growth</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">25. Read Other People&apos;s Code</h3>
+          <p>Study open-source projects to learn new patterns and techniques.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">26. Contribute to Open Source</h3>
+          <p>Give back to the community and learn from experienced developers.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">27. Learn Multiple Languages</h3>
+          <p>Understanding different paradigms makes you a better programmer.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">28. Practice Problem Solving</h3>
+          <p>Use platforms like LeetCode or HackerRank to improve your algorithms skills.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">29. Build Side Projects</h3>
+          <p>Apply what you learn by building real applications.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">30. Stay Updated</h3>
+          <p>Follow tech blogs, podcasts, and conferences to stay current.</p>
+        </div>
+      </div>
+      
+      <div class="flex justify-center my-8">
+        <img src="/tsk.png" alt="Learning and Growth" class="rounded-lg shadow-lg max-w-md" />
+      </div>
+      
+      <h2>💼 Career Development</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">31. Build a Portfolio</h3>
+          <p>Showcase your best work to potential employers or clients.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">32. Network Actively</h3>
+          <p>Attend meetups, conferences, and connect with other developers.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">33. Learn Soft Skills</h3>
+          <p>Communication, teamwork, and problem-solving are as important as technical skills.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">34. Mentor Others</h3>
+          <p>Teaching others helps solidify your own knowledge.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">35. Negotiate Your Salary</h3>
+          <p>Research market rates and don&apos;t be afraid to negotiate.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">36. Specialize Strategically</h3>
+          <p>Develop deep expertise in specific areas while maintaining broad knowledge.</p>
+        </div>
+      </div>
+      
+      <h2>⚡ Productivity Tips</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">37. Use Keyboard Shortcuts</h3>
+          <p>Learn your IDE&apos;s shortcuts to navigate and code faster.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">38. Automate Repetitive Tasks</h3>
+          <p>Write scripts to automate boring, repetitive work.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">39. Use Multiple Monitors</h3>
+          <p>Increase productivity with additional screen real estate.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">40. Take Regular Breaks</h3>
+          <p>Use the Pomodoro Technique to maintain focus and avoid burnout.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">41. Keep a Development Journal</h3>
+          <p>Document what you learn and problems you solve for future reference.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">42. Use Version Control Hooks</h3>
+          <p>Automate testing and linting with pre-commit hooks.</p>
+        </div>
+      </div>
+      
+      <div class="flex justify-center my-8">
+        <img src="/tracker1.jpg" alt="Productivity Tips" class="rounded-lg shadow-lg max-w-md" />
+      </div>
+      
+      <h2>🎯 Advanced Concepts</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">43. Understand Design Patterns</h3>
+          <p>Learn common patterns like Singleton, Factory, Observer, etc.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">44. Master Data Structures</h3>
+          <p>Know when to use arrays, linked lists, trees, graphs, etc.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">45. Learn System Design</h3>
+          <p>Understand how to design scalable, distributed systems.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">46. Study Algorithms</h3>
+          <p>Know common algorithms and their time/space complexity.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">47. Understand Memory Management</h3>
+          <p>Know how garbage collection works and how to avoid memory leaks.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">48. Learn About Concurrency</h3>
+          <p>Understand threads, processes, and asynchronous programming.</p>
+        </div>
+      </div>
+      
+      <h2>🌟 Final Tips</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">49. Stay Humble</h3>
+          <p>There&apos;s always more to learn. Stay curious and open to new ideas.</p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">50. Enjoy the Journey</h3>
+          <p>Programming is a creative and rewarding profession. Have fun with it!</p>
+        </div>
+      </div>
+      
+      <div class="flex justify-center my-8">
+        <img src="/tracker2.jpg" alt="Final Tips" class="rounded-lg shadow-lg max-w-md" />
+      </div>
+      
+      <h2>Conclusion</h2>
+      <p>These 50 tips represent the collective wisdom of the developer community. Remember that becoming a great developer is a journey, not a destination. Focus on continuous improvement and don&apos;t try to implement everything at once.</p>
+      
+      <p>Start with the basics and gradually incorporate more advanced practices into your workflow. The most important thing is to keep learning and growing.</p>
+      
+      <p><em>"The best way to predict the future is to implement it." - Alan Kay</em></p>
+    `,
+    date: "December 20, 2024",
+    category: "Development Tips",
+    readTime: "8 min read",
+    author: "Manasseh Kabutey"
+  },
+  {
+    id: 2,
     title: "Launching My New Portfolio Website",
     excerpt: "Excited to share my new portfolio website built with Next.js and Tailwind CSS. This project represents my journey in web development and showcases my skills in modern frontend technologies.",
     content: `
@@ -70,7 +399,7 @@ const blogPosts: BlogPost[] = [
     author: "Manasseh Kabutey"
   },
   {
-    id: 2,
+    id: 3,
     title: "The Power of Consistency in Software Development",
     excerpt: "Today&apos;s motivational thought: Success in software development isn&apos;t about being perfect every day, but about showing up consistently. Small improvements compound over time into remarkable results.",
     content: `
@@ -123,7 +452,7 @@ const blogPosts: BlogPost[] = [
     author: "Manasseh Kabutey"
   },
   {
-    id: 3,
+    id: 4,
     title: "Why I Choose Flutter for Mobile Development",
     excerpt: "Exploring the reasons behind my preference for Flutter over other mobile development frameworks. From cross-platform efficiency to the Dart language, here&apos;s what makes Flutter my go-to choice.",
     content: `

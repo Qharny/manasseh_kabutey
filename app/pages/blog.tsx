@@ -15,6 +15,14 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
+    title: "50 Essential Tips for Every Developer",
+    excerpt: "A comprehensive guide covering 50 essential tips that every developer should know, from coding best practices to career development and productivity hacks.",
+    date: "December 20, 2024",
+    category: "Development Tips",
+    readTime: "8 min read"
+  },
+  {
+    id: 2,
     title: "Launching My New Portfolio Website",
     excerpt: "Excited to share my new portfolio website built with Next.js and Tailwind CSS. This project represents my journey in web development and showcases my skills in modern frontend technologies.",
     date: "December 15, 2024",
@@ -22,7 +30,7 @@ const blogPosts: BlogPost[] = [
     readTime: "3 min read"
   },
   {
-    id: 2,
+    id: 3,
     title: "The Power of Consistency in Software Development",
     excerpt: "Today&apos;s motivational thought: Success in software development isn&apos;t about being perfect every day, but about showing up consistently. Small improvements compound over time into remarkable results.",
     date: "December 10, 2024",
@@ -30,7 +38,7 @@ const blogPosts: BlogPost[] = [
     readTime: "2 min read"
   },
   {
-    id: 3,
+    id: 4,
     title: "Why I Choose Flutter for Mobile Development",
     excerpt: "Exploring the reasons behind my preference for Flutter over other mobile development frameworks. From cross-platform efficiency to the Dart language, here&apos;s what makes Flutter my go-to choice.",
     date: "December 5, 2024",
