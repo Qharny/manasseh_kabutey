@@ -24,7 +24,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 2,
     title: "The Power of Consistency in Software Development",
-    excerpt: "Today's motivational thought: Success in software development isn't about being perfect every day, but about showing up consistently. Small improvements compound over time into remarkable results.",
+    excerpt: "Today&apos;s motivational thought: Success in software development isn&apos;t about being perfect every day, but about showing up consistently. Small improvements compound over time into remarkable results.",
     date: "December 10, 2024",
     category: "Motivation",
     readTime: "2 min read"
@@ -32,7 +32,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 3,
     title: "Why I Choose Flutter for Mobile Development",
-    excerpt: "Exploring the reasons behind my preference for Flutter over other mobile development frameworks. From cross-platform efficiency to the Dart language, here's what makes Flutter my go-to choice.",
+    excerpt: "Exploring the reasons behind my preference for Flutter over other mobile development frameworks. From cross-platform efficiency to the Dart language, here&apos;s what makes Flutter my go-to choice.",
     date: "December 5, 2024",
     category: "Tech Insights",
     readTime: "4 min read"

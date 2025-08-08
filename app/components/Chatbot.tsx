@@ -79,7 +79,7 @@ const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
-      text: "Hi there! I'm Manasseh's virtual assistant. How can I help you?",
+              text: "Hi there! I&apos;m Manasseh&apos;s virtual assistant. How can I help you?",
       isUser: false,
       timestamp: new Date(),
     },
@@ -143,13 +143,13 @@ const Chatbot = () => {
     
     // Greetings
     if (/^(hi|hello|hey|greetings|howdy|good (morning|afternoon|evening))$/i.test(normalizedQuery)) {
-      return "Hello! I'm Manasseh's portfolio assistant. How can I help you today?";
+      return "Hello! I&apos;m Manasseh&apos;s portfolio assistant. How can I help you today?";
     }
     
     // Check for common questions in multiple ways
     if (containsAny(normalizedQuery, ["who", "about", "tell me about", "info about", "biography", "background"]) && 
         containsAny(normalizedQuery, ["you", "manasseh", "himself", "portfolio owner"])) {
-      return `${portfolioData.personal.about} He's currently based in ${portfolioData.personal.location} and specializes in mobile and web development.`;
+      return `${portfolioData.personal.about} He&apos;s currently based in ${portfolioData.personal.location} and specializes in mobile and web development.`;
     }
 
     // Experience queries
@@ -158,7 +158,7 @@ const Chatbot = () => {
         `${exp.title} at ${exp.company} (${exp.period}): ${exp.description}`
       ).join("\n\n");
       
-      return `Here's Manasseh's work experience:\n\n${experiences}\n\nWould you like more details about any specific role?`;
+      return `Here&apos;s Manasseh&apos;s work experience:\n\n${experiences}\n\nWould you like more details about any specific role?`;
     }
 
     // Skills queries
@@ -172,7 +172,7 @@ const Chatbot = () => {
         `${proj.name}: ${proj.description} (Built with: ${proj.technologies.join(", ")})`
       ).join("\n\n");
       
-      return `Here are some of Manasseh's notable projects:\n\n${projects}\n\nWould you like me to elaborate on any specific project?`;
+      return `Here are some of Manasseh&apos;s notable projects:\n\n${projects}\n\nWould you like me to elaborate on any specific project?`;
     }
 
     // Education queries
@@ -181,7 +181,7 @@ const Chatbot = () => {
         `${edu.degree} from ${edu.institution} (${edu.year})`
       ).join("\n\n");
       
-      return `Manasseh's educational background:\n\n${education}`;
+      return `Manasseh&apos;s educational background:\n\n${education}`;
     }
 
     // Contact queries
@@ -210,21 +210,21 @@ const Chatbot = () => {
     );
     
     if (techMatch) {
-      return `Yes, Manasseh is proficient in ${techMatch}. Would you like to know about other technologies he uses or projects where he's applied ${techMatch}?`;
+      return `Yes, Manasseh is proficient in ${techMatch}. Would you like to know about other technologies he uses or projects where he&apos;s applied ${techMatch}?`;
     }
 
     // Thanks or appreciation
     if (containsAny(normalizedQuery, ["thanks", "thank you", "appreciate", "helpful"])) {
-      return "You're welcome! I'm happy to help. Is there anything else you'd like to know about Manasseh?";
+      return "You&apos;re welcome! I&apos;m happy to help. Is there anything else you&apos;d like to know about Manasseh?";
     }
 
     // Goodbye
     if (containsAny(normalizedQuery, ["bye", "goodbye", "see you", "farewell"])) {
-      return "Thank you for your interest in Manasseh's portfolio! Feel free to return if you have more questions. Have a great day!";
+      return "Thank you for your interest in Manasseh&apos;s portfolio! Feel free to return if you have more questions. Have a great day!";
     }
 
     // For queries that don't match any category
-    return "I'm not sure I understood your question. You can ask me about Manasseh's experience, skills, projects, education, or contact information. How can I help you learn more about Manasseh?";
+    return "I&apos;m not sure I understood your question. You can ask me about Manasseh&apos;s experience, skills, projects, education, or contact information. How can I help you learn more about Manasseh?";
   };
 
   // Helper function to check if a string contains any of the keywords
