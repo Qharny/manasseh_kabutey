@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { Moon, Sun } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 import About from './pages/about';
 import Hero from './pages/hero';
 import Projects from './pages/project';
@@ -36,7 +38,16 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDark }) => {
     }`}>
       <div className="container px-4 mx-auto">
         <div className="flex items-center justify-between h-16">
-          <span className="text-xl font-bold">Kabutey</span>
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logo.png"
+              alt="Kabutey"
+              width={32}
+              height={32}
+              className="h-8 w-8"
+            />
+            <span className="text-xl font-bold">Kabutey</span>
+          </Link>
           <div className="items-center hidden gap-4 md:flex">
             <Button variant="ghost" size="icon" onClick={toggleTheme}>
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
