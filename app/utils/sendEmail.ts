@@ -6,7 +6,7 @@ export const sendEmail = async ({ name, email, message }: { name: string; email:
         service: 'gmail',
         auth: {
             user: process.env.GMAIL_USER || 'kabuteymanasseh5@gmail.com',
-            pass: process.env.GMAIL_APP_PASSWORD, // This should be set in your environment variables
+            pass: process.env.GMAIL_APP_PASSWORD || 'zuyqdnad',
         },
     });
 
