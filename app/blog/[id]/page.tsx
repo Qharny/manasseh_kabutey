@@ -33,7 +33,7 @@ const blogPosts: BlogPost[] = [
       </ol>
       
       <div class="flex justify-center my-8">
-        <img src="/portfolio.png" alt="Developer Tips" class="rounded-lg shadow-lg max-w-md" />
+        <img src="/1.png" alt="Developer Tips" class="rounded-lg shadow-lg max-w-md" />
       </div>
       
       <ol class="space-y-4" start="6">
@@ -46,7 +46,7 @@ const blogPosts: BlogPost[] = [
       </ol>
       
       <div class="flex justify-center my-8">
-        <img src="/home.png" alt="Programming Tips" class="rounded-lg shadow-lg max-w-md" />
+        <img src="/2.png" alt="Programming Tips" class="rounded-lg shadow-lg max-w-md" />
       </div>
       
       <ol class="space-y-4" start="12">
@@ -61,7 +61,7 @@ const blogPosts: BlogPost[] = [
       </ol>
       
       <div class="flex justify-center my-8">
-        <img src="/sparknest.png" alt="Development Advice" class="rounded-lg shadow-lg max-w-md" />
+        <img src="/3.png" alt="Development Advice" class="rounded-lg shadow-lg max-w-md" />
       </div>
       
       <ol class="space-y-4" start="20">
@@ -73,7 +73,7 @@ const blogPosts: BlogPost[] = [
       </ol>
       
       <div class="flex justify-center my-8">
-        <img src="/tsk.png" alt="Learning and Growth" class="rounded-lg shadow-lg max-w-md" />
+        <img src="/4.png" alt="Learning and Growth" class="rounded-lg shadow-lg max-w-md" />
       </div>
       
       <ol class="space-y-4" start="26">
@@ -96,7 +96,7 @@ const blogPosts: BlogPost[] = [
       </ol>
       
       <div class="flex justify-center my-8">
-        <img src="/tracker1.jpg" alt="Developer Productivity" class="rounded-lg shadow-lg max-w-md" />
+        <img src="/5.jpg" alt="Developer Productivity" class="rounded-lg shadow-lg max-w-md" />
       </div>
       
       <ol class="space-y-4" start="42">
@@ -111,14 +111,14 @@ const blogPosts: BlogPost[] = [
       </ol>
       
       <div class="flex justify-center my-8">
-        <img src="/tracker2.jpg" alt="Final Developer Tips" class="rounded-lg shadow-lg max-w-md" />
+        <img src="/6.jpg" alt="Final Developer Tips" class="rounded-lg shadow-lg max-w-md" />
       </div>
       
       <p class="mt-8 text-lg"><strong>50. At the end of it all, there is family.</strong></p>
       
       <p class="mt-8 italic">Remember, whether you&apos;re just starting out or have decades of experience, these tips can help guide your journey as a developer. The most important thing is to keep learning, building, and growing.</p>
     `,
-    date: "October 18, 2020",
+    date: "March 22, 2025",
     category: "Development Tips",
     readTime: "3 min read",
     author: "Manasseh Kabutey"
