@@ -96,7 +96,7 @@ const blogPosts: BlogPost[] = [
       </ol>
       
       <div class="flex justify-center my-8">
-        <img src="/5.jpg" alt="Developer Productivity" class="rounded-lg shadow-lg max-w-md" />
+        <img src="/5.png" alt="Developer Productivity" class="rounded-lg shadow-lg max-w-md" />
       </div>
       
       <ol class="space-y-4" start="42">
@@ -111,7 +111,7 @@ const blogPosts: BlogPost[] = [
       </ol>
       
       <div class="flex justify-center my-8">
-        <img src="/6.jpg" alt="Final Developer Tips" class="rounded-lg shadow-lg max-w-md" />
+        <img src="/6.png" alt="Final Developer Tips" class="rounded-lg shadow-lg max-w-md" />
       </div>
       
       <p class="mt-8 text-lg"><strong>50. At the end of it all, there is family.</strong></p>
