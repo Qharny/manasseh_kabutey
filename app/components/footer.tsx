@@ -26,6 +26,7 @@ const Footer = () => {
     { name: 'Skills', href: '#skills' },
     { name: 'Education', href: '#education' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Privacy Policies', href: '/privacy' },
   ];
 
   const socialLinks = [

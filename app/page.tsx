@@ -15,65 +15,7 @@ import Footer from './components/footer';
 import { useTheme } from './hooks/use-theme';
 import Chatbot from './components/Chatbot';
 
-interface NavbarProps {
-  toggleTheme: () => void;
-  isDark: boolean;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDark }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm' : 'bg-transparent'
-    }`}>
-      <div className="container px-4 mx-auto">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/logo.png"
-              alt="Kabutey"
-              width={32}
-              height={32}
-              className="h-8 w-8"
-            />
-            <span className="text-xl font-bold">Kabutey</span>
-          </Link>
-          <div className="items-center hidden gap-4 md:flex">
-            <Button variant="ghost" size="icon" onClick={toggleTheme}>
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </Button>
-            <Button>Contact</Button>
-          </div>
-          <div className="md:hidden">
-            <Button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-              {isMobileMenuOpen ? 'Close' : 'Menu'}
-            </Button>
-          </div>
-        </div>
-      </div>
-      {isMobileMenuOpen && (
-        <div className="bg-white md:hidden dark:bg-gray-900">
-          <div className="flex flex-col items-center">
-            <Button variant="ghost" size="icon" onClick={toggleTheme}>
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </Button>
-            <Button>Contact</Button>
-          </div>
-        </div>
-      )}
-    </nav>
-  );
-};
+import Navbar from './components/Navbar';
 
 const Page = () => {
   const { toggleTheme, theme } = useTheme();
