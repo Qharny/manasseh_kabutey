@@ -11,6 +11,12 @@ import { useTheme } from '../hooks/use-theme';
 import { Button } from '../components/UI/button';
 import { Badge } from '../components/UI/badge';
 
+declare global {
+  interface Window {
+    particlesJS: (id: string, config: unknown) => void;
+  }
+}
+
 interface AppBase {
   type: 'mobile' | 'web';
   title: string;
@@ -203,8 +209,8 @@ const AppsPage = () => {
     document.body.appendChild(script);
 
     script.onload = () => {
-      if ((window as any).particlesJS) {
-        (window as any).particlesJS('apps-particles-js', {
+      if (window.particlesJS) {
+        window.particlesJS('apps-particles-js', {
           particles: {
             number: { value: 30 },
             color: { value: theme === 'dark' ? '#3b82f6' : '#2563eb' },
@@ -332,7 +338,7 @@ const AppsPage = () => {
               <div className="relative z-10">
                 <h2 className="text-4xl md:text-5xl font-black mb-6">Have an Idea?</h2>
                 <p className="text-blue-100 text-lg mb-10 max-w-xl mx-auto">
-                  Let's collaborate to build something amazing. From concept to shipping on the Play Store, I can help you realize your vision.
+                  Let&apos;s collaborate to build something amazing. From concept to shipping on the Play Store, I can help you realize your vision.
                 </p>
                 <Link href="/#contact">
                   <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 rounded-2xl px-12 py-8 text-lg font-bold shadow-2xl">

@@ -4,11 +4,11 @@ import PrivacyDetailClient from './PrivacyDetailClient';
 import { notFound } from 'next/navigation';
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
   const policy = privacyPolicies.find(p => p.slug === slug);
 
   if (!policy) {
@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const PrivacyDetailPage = ({ params }: Props) => {
-  const { slug } = params;
+const PrivacyDetailPage = async ({ params }: Props) => {
+  const { slug } = await params;
   const policy = privacyPolicies.find(p => p.slug === slug);
 
   if (!policy) {
